@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public class InputFieldGetValueFromSlider : MonoBehaviour
 {

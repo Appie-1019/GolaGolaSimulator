@@ -1,5 +1,4 @@
 using DG.Tweening;
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -131,7 +130,6 @@ public class ToastUI : MonoBehaviour
     IEnumerator CutText(TextMeshProUGUI tmp, int maxCharactersNumber, float duration, string lastMessege = "...")
     {
         if (tmp == null || string.IsNullOrEmpty(tmp.text)) yield break;
-
         if (tmp.text.Length < maxCharactersNumber) yield break;
 
         string originalText = tmp.text;
@@ -164,7 +162,6 @@ public class ToastUI : MonoBehaviour
     void CutTextImmediately(TextMeshProUGUI tmp, int maxCharactersNumber, string lastMessege = "...")
     {
         if (tmp == null || string.IsNullOrEmpty(tmp.text)) return;
-
         if (tmp.text.Length < maxCharactersNumber) return;
 
         string baseText = tmp.text.Substring(0, maxCharactersNumber);
