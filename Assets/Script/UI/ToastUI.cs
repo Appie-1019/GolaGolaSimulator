@@ -4,29 +4,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-/// <summary> 토스트 메시지의 동작 데이터 구조체 </summary>
-[Serializable]
-public struct ToastUIData
-{
-    [Header("Time, Default Position Set")]
-    public Vector2 StartAnchoredPosition;   // 시작 위치
-    public Vector2 EndAnchoredPosition; // 첫 번째 표시 위치
-    public float MoveDuration;  // 움직임 기간
-    public float ShowTime;  // 표시 기간 (이후 파괴)
-
-    [Header("Displacement")]
-    public Vector2 FirstDisplacementSizeDelta;  // 첫 번째 쌓임에서 바뀔 SizeDelta
-    public Vector2 FirstDisplacementOffset; // 첫 번째 쌓임에서 이동할 벡터
-    public Vector2 DisplacementOffset;  // 첫 번째가 아닌 쌓임에서 이동할 벡터
-    public Vector2 DestroyOffset;   // 파괴될 때 움직일 벡터
-
-    [Header("Displacement Text")]
-    public int DisplacementCharactersNumber;    // 쌓임이 발생할 경우 최대 글자 제한
-    public float DisplacementTextFontSize;  // 쌓임이 발생할 경우 글자의 폰트 크기
-
-    public int MaxAccumulation; // 최대 쌓임 횟수 제한
-}
-
 public class ToastUI : MonoBehaviour
 {
     CanvasGroup cg;

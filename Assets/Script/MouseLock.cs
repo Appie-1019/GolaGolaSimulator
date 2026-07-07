@@ -9,15 +9,16 @@ public class MouseLock : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
-            MouseLockToggle();
+            SetMouseLock(!isMouseLocked);
         }
     }
-
-    private void MouseLockToggle() => SetMouseLock(!isMouseLocked);
 
     private void SetMouseLock(bool isLocked)
     {
         Cursor.visible = !isLocked;
         isMouseLocked = isLocked;
+
+        string toastMessage = isLocked ? "마우스 보이지 않음" : "마우스 보임";
+        ToastUIManager.Instance.AddToast(toastMessage);
     }
 }
