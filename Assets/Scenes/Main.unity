@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 17498365}
+  - component: {fileID: 17498366}
   - component: {fileID: 17498364}
   m_Layer: 0
   m_Name: Arm_L
@@ -183,7 +184,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8287176325108987090, guid: 5a11aea0545509946a7b8e4add0dd9cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -203,13 +204,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17498363}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.8, y: 0.28, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.7, y: 0.28, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1139188752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &17498366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17498363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dea2c2e2f4a3e548ba0a0259760cb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
+  target: {fileID: 770599425}
+  targetOffset: {x: -0.3, y: 0}
+  angleOffset: -90
 --- !u!1 &127245345
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +259,81 @@ Transform:
   - {fileID: 1348815786}
   m_Father: {fileID: 1701025712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &499278267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 499278268}
+  - component: {fileID: 499278270}
+  - component: {fileID: 499278269}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499278268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499278267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.26271, y: -0.52991, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499278269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499278267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &499278270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499278267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe15fad7ba49af4996406539637f90d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseLock
 --- !u!1 &632546441
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 632546443}
+  - component: {fileID: 632546444}
   - component: {fileID: 632546442}
   m_Layer: 0
   m_Name: Leg_R
@@ -307,7 +399,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2142982873, guid: 5a11aea0545509946a7b8e4add0dd9cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -327,13 +419,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632546441}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.16977951, w: 0.98548216}
+  m_LocalRotation: {x: -0, y: -0, z: 0.16977951, w: 0.98548216}
   m_LocalPosition: {x: 0.725, y: -2.2, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1139188752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.55}
+--- !u!114 &632546444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632546441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dea2c2e2f4a3e548ba0a0259760cb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
+  target: {fileID: 2068123014}
+  targetOffset: {x: 0.3, y: 0}
+  angleOffset: -90
 --- !u!1 &703551310
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +609,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1701025712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1139188751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139188752}
+  m_Layer: 0
+  m_Name: Appie_Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139188752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139188751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1701025712}
+  - {fileID: 1360070083}
+  - {fileID: 17498365}
+  - {fileID: 632546443}
+  - {fileID: 1565125582}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226402736
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +709,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1346565487, guid: 5a11aea0545509946a7b8e4add0dd9cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -672,7 +815,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1371045632, guid: 5a11aea0545509946a7b8e4add0dd9cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -693,6 +836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1360070083}
+  - component: {fileID: 1360070084}
   - component: {fileID: 1360070082}
   m_Layer: 0
   m_Name: Arm_R
@@ -748,7 +892,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8287176325108987090, guid: 5a11aea0545509946a7b8e4add0dd9cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -768,13 +912,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360070081}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.8, y: 0.28, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.7, y: 0.28, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1139188752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1360070084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360070081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dea2c2e2f4a3e548ba0a0259760cb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
+  target: {fileID: 770599425}
+  targetOffset: {x: 0.3, y: 0}
+  angleOffset: -90
 --- !u!1 &1499725103
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1565125582}
+  - component: {fileID: 1565125583}
   - component: {fileID: 1565125581}
   m_Layer: 0
   m_Name: Leg_L
@@ -930,11 +1090,11 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2142982873, guid: 5a11aea0545509946a7b8e4add0dd9cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.04, y: 0.12}
@@ -950,13 +1110,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565125580}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.16977951, w: 0.98548216}
+  m_LocalRotation: {x: -0, y: -0, z: -0.16977951, w: 0.98548216}
   m_LocalPosition: {x: -0.725, y: -2.2, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1139188752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.55}
+--- !u!114 &1565125583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565125580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dea2c2e2f4a3e548ba0a0259760cb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
+  target: {fileID: 2068123014}
+  targetOffset: {x: -0.3, y: 0}
+  angleOffset: -90
 --- !u!1 &1701025711
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +1141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701025712}
+  - component: {fileID: 1701025713}
   m_Layer: 0
   m_Name: GolaBody
   m_TagString: Untagged
@@ -981,7 +1157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701025711}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -989,8 +1165,20 @@ Transform:
   - {fileID: 127245346}
   - {fileID: 770599425}
   - {fileID: 2068123014}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1139188752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1701025713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701025711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71605a0798eeaf945b8272da559bff07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolaGolaBody
 --- !u!1 &2068123013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,8 +1216,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 703551313}
   - {fileID: 1499725104}
-  - {fileID: 1701025712}
-  - {fileID: 1360070083}
-  - {fileID: 17498365}
-  - {fileID: 632546443}
-  - {fileID: 1565125582}
+  - {fileID: 1139188752}
+  - {fileID: 499278268}
