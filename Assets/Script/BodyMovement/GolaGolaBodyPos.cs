@@ -36,7 +36,9 @@ public class GolaGolaBodyPos : MonoBehaviour
     {
         if (Pointer.current == null) return;
 
-        transform.position = GetPointerPos();
+        Vector3 targetPos = GetPointerPos();
+        targetPos = Vector3.ClampMagnitude(targetPos, 20f);
+        transform.position = targetPos;
     }
 
     public void MobileControl()
