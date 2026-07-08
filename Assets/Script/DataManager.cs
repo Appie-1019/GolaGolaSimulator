@@ -33,8 +33,6 @@ public class DataManager : MonoBehaviour
     /// <returns> 기기 종류가 모바일이면 <see langword="true"/> 아니면 <see langword="false"/> </returns>
     public bool IsMobileDevice()
     {
-        if (Touchscreen.current != null) return false;
-
         if (Application.platform == RuntimePlatform.Android ||
             Application.platform == RuntimePlatform.IPhonePlayer)
         {

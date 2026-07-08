@@ -33,7 +33,7 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
         }
         set
         {
-            SetTextWithoutNotify(value);
+            SetValueWithoutNotify(value);
             onValueChanged?.Invoke(Value);
         }
     }
@@ -105,7 +105,7 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     /// <summary> 슬라이더의 값을 설정하지만 UI 갱신 및 이벤트 호출을 하지 않음 </summary>
     /// <param name="value">설정할 값</param>
-    public void SetTextWithoutNotify(float value)
+    public void SetValueWithoutNotify(float value)
     {
         float clampedValue = Mathf.Clamp(value, minValue, maxValue);
         rawPercent = Mathf.InverseLerp(minValue, maxValue, clampedValue);

@@ -1,13 +1,12 @@
 using TMPro;
 using UnityEngine;
 
-public class InputFieldGetValueFromSlider : MonoBehaviour
+public class InputFieldValueLimiter : MonoBehaviour
 {
     public Slider slider;
-    private TMP_InputField inputField;
 
+    [HideInInspector] public TMP_InputField inputField;
     private string lastText = string.Empty;
-    private System.Action onValueChanged;
 
     private void Awake()
     {
@@ -20,22 +19,10 @@ public class InputFieldGetValueFromSlider : MonoBehaviour
         inputField.onValueChanged.AddListener(OnValueChanged);
     }
 
-    void Start()
+    private void Start()
     {
-        if (slider == null)
-        {
-            Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
-            return;
-        }
-        slider.AddListener(SetFloatToText);
-        SetFloatToText(slider.Value);
-    }
-
-    private void SetFloatToText(float value)
-    {
-        string text = value.ToString("0.0###");
-        lastText = text;
-        inputField.SetTextWithoutNotify(text);
+        lastText = 0.1f.ToString();
+        inputField.SetTextWithoutNotify(0.1f.ToString());
     }
 
     private void OnValueChanged(string text)
@@ -48,12 +35,14 @@ public class InputFieldGetValueFromSlider : MonoBehaviour
         {
             value = Mathf.Clamp(value, slider.MinValue, slider.MaxValue);
             SetFloatToText(value);
-            onValueChanged.Invoke();
+            BackgroundManager.Instance?.UpdateBackgroundUI(BackgroundSetterType.InputField);
         }
     }
 
-    public void AddListener(System.Action action)
+    public void SetFloatToText(float value)
     {
-        onValueChanged += action;
+        string text = value.ToString("0.0###");
+        lastText = text;
+        inputField.SetTextWithoutNotify(text);
     }
 }
