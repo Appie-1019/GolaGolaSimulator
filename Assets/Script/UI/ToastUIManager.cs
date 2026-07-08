@@ -5,7 +5,7 @@ using UnityEngine;
 
 /// <summary> 토스트 메시지의 동작 데이터 구조체 </summary>
 [Serializable]
-public struct ToastUIData
+public class ToastUIData
 {
     [Header("Time, Default Position Set")]
     public Vector2 StartAnchoredPosition;   // 시작 위치
@@ -53,6 +53,9 @@ public class ToastUIManager : MonoBehaviour
         StartCoroutine(FirstToast());
     }
 
+    /// <summary>
+    /// 프로그램 시작 시 첫 번째 토스트 메시지 출력
+    /// </summary>
     IEnumerator FirstToast()
     {
         yield return new WaitForSeconds(1f);
@@ -72,6 +75,7 @@ public class ToastUIManager : MonoBehaviour
         toastUIs.Add(newMessegeUI);
     }
 
+    /// <summary> 모든 존재하는 <see cref="ToastUI"/> 의 쌓음 처리 (<see cref="StackAllToast"/>) 호출 </summary>
     public void StackAllToast()
     {
         foreach (var t in toastUIs)

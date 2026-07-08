@@ -38,17 +38,8 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
         }
     }
 
-    public float MinValue
-    {
-        get => minValue;
-        set { }
-    }
-
-    public float MaxValue
-    {
-        get => maxValue;
-        set { }
-    }
+    public float MinValue { get => minValue; }
+    public float MaxValue { get => maxValue; }
 
     private void OnValidate()
     {
@@ -112,6 +103,8 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
         if (fillImage != null) fillImage.fillAmount = displayPercent;
     }
 
+    /// <summary> 슬라이더의 값을 설정하지만 UI 갱신 및 이벤트 호출을 하지 않음 </summary>
+    /// <param name="value">설정할 값</param>
     public void SetTextWithoutNotify(float value)
     {
         float clampedValue = Mathf.Clamp(value, minValue, maxValue);
