@@ -68,6 +68,8 @@ public class ToastUIManager : MonoBehaviour
     /// <param name="messege">토스트 메시지의 글자</param>
     public void AddToast(string messege)
     {
+        if (!DataManager.CanToast) return;
+
         StackAllToast();
         ToastUI newMessegeUI = Instantiate(toastMessege, canvas);
         newMessegeUI.SetData(data);
