@@ -5,11 +5,19 @@ public class GolaGolaParts : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private Vector2 targetOffset;
     [SerializeField] private float angleOffset;
+    [SerializeField] private float MagneticSpeed;
+    [SerializeField] private Vector3 PartsDefaultOffset;
+
+    private void Start()
+    {
+        PartsDefaultOffset = transform.position - target.position;
+    }
 
     void Update()
     {
         if (target != null)
         {
+            transform.position = Vector3.Lerp(transform.position, target.position + PartsDefaultOffset, Time.deltaTime * MagneticSpeed);
             LookAtPos((Vector2)target.position + targetOffset);
         }
     }

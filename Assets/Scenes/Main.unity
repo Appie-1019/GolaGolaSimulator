@@ -226,6 +226,8 @@ MonoBehaviour:
   target: {fileID: 770599425}
   targetOffset: {x: -0.3, y: 0}
   angleOffset: -90
+  MagneticSpeed: 1.5
+  PartsDefaultOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &97223061
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,11 +706,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 190664638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd3331a6d97362f44b58e25655295ca1, type: 3}
+  m_Script: {fileID: 11500000, guid: 98e33fa76de523c46986ad130b8652ba, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputFieldValueLimiter
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldGetValueFromSlider
   slider: {fileID: 1294696295}
-  inputField: {fileID: 0}
 --- !u!1 &196659811
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196659812}
   - component: {fileID: 196659816}
+  - component: {fileID: 196659815}
   - component: {fileID: 196659814}
   - component: {fileID: 196659813}
   m_Layer: 5
@@ -787,6 +789,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196659811}
   m_CullTransparentMesh: 1
+--- !u!114 &196659815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196659811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe2c154b30080447afbb368020a03e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderGetValueFromInputField
+  inputField: {fileID: 1392220322}
 --- !u!114 &196659816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,8 +830,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 203086325}
-  - component: {fileID: 203086329}
   - component: {fileID: 203086328}
+  - component: {fileID: 203086329}
   - component: {fileID: 203086327}
   - component: {fileID: 203086326}
   m_Layer: 5
@@ -994,11 +1009,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 203086324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd3331a6d97362f44b58e25655295ca1, type: 3}
+  m_Script: {fileID: 11500000, guid: 98e33fa76de523c46986ad130b8652ba, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputFieldValueLimiter
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldGetValueFromSlider
   slider: {fileID: 2104796367}
-  inputField: {fileID: 0}
 --- !u!1 &209176003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,6 +1796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499278268}
   - component: {fileID: 499278270}
+  - component: {fileID: 499278271}
   - component: {fileID: 499278272}
   - component: {fileID: 499278273}
   - component: {fileID: 499278274}
@@ -1819,6 +1834,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe15fad7ba49af4996406539637f90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseLock
+--- !u!114 &499278271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499278267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d6465c92ce1254dbc754f34e839c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
 --- !u!114 &499278272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,18 +1894,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 499278267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7e98dd940f0464eba51c6e2beadeaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 4811839334573fb4db39cca5a5e444b3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BackgroundManager
-  sliders:
-  - {fileID: 2104796367}
-  - {fileID: 1294696295}
-  - {fileID: 196659816}
-  inputFields:
-  - {fileID: 203086329}
-  - {fileID: 190664643}
-  - {fileID: 1392220325}
-  backgroundPreview: {fileID: 1619934583}
+  m_EditorClassIdentifier: Assembly-CSharp::FrameLimit
 --- !u!1 &592337924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2154,8 @@ MonoBehaviour:
   target: {fileID: 2068123014}
   targetOffset: {x: 0.3, y: 0}
   angleOffset: -90
+  MagneticSpeed: 1.5
+  PartsDefaultOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &661169745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,6 +3705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294696291}
   - component: {fileID: 1294696295}
+  - component: {fileID: 1294696294}
   - component: {fileID: 1294696293}
   - component: {fileID: 1294696292}
   m_Layer: 5
@@ -3753,6 +3774,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294696290}
   m_CullTransparentMesh: 1
+--- !u!114 &1294696294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294696290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe2c154b30080447afbb368020a03e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderGetValueFromInputField
+  inputField: {fileID: 190664640}
 --- !u!114 &1294696295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4045,6 +4079,8 @@ MonoBehaviour:
   target: {fileID: 770599425}
   targetOffset: {x: 0.3, y: 0}
   angleOffset: -90
+  MagneticSpeed: 1.5
+  PartsDefaultOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1392220320
 GameObject:
   m_ObjectHideFlags: 0
@@ -4233,11 +4269,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392220320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd3331a6d97362f44b58e25655295ca1, type: 3}
+  m_Script: {fileID: 11500000, guid: 98e33fa76de523c46986ad130b8652ba, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputFieldValueLimiter
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldGetValueFromSlider
   slider: {fileID: 196659816}
-  inputField: {fileID: 0}
 --- !u!1 &1394929969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,6 +4876,8 @@ MonoBehaviour:
   target: {fileID: 2068123014}
   targetOffset: {x: -0.3, y: 0}
   angleOffset: -90
+  MagneticSpeed: 1.5
+  PartsDefaultOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1619934581
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,6 +4887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619934582}
+  - component: {fileID: 1619934585}
   - component: {fileID: 1619934584}
   - component: {fileID: 1619934583}
   m_Layer: 5
@@ -4916,6 +4954,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619934581}
   m_CullTransparentMesh: 1
+--- !u!114 &1619934585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619934581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a1c314564df1244aeaa8c4220d5401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundPreview
+  sliderR: {fileID: 2104796367}
+  sliderG: {fileID: 1294696295}
+  sliderB: {fileID: 196659816}
+  inputR: {fileID: 203086329}
+  inputG: {fileID: 190664643}
+  inputB: {fileID: 1392220325}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1634812012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,6 +5167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71605a0798eeaf945b8272da559bff07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaBody
+  moveSpeed: 20
 --- !u!1 &1703568050
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,6 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UselessSwitch
   toggleSwitch: {fileID: 1431759213}
+  backgroundPreview: {fileID: 1619934585}
 --- !u!1 &2038259698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,6 +5828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2104796364}
   - component: {fileID: 2104796367}
+  - component: {fileID: 2104796368}
   - component: {fileID: 2104796366}
   - component: {fileID: 2104796365}
   m_Layer: 5
@@ -5856,6 +5916,19 @@ MonoBehaviour:
   maxValue: 1
   isInteger: 0
   rawPercent: 1
+--- !u!114 &2104796368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104796363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe2c154b30080447afbb368020a03e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderGetValueFromInputField
+  inputField: {fileID: 203086326}
 --- !u!1001 &8283877113834330298
 PrefabInstance:
   m_ObjectHideFlags: 0

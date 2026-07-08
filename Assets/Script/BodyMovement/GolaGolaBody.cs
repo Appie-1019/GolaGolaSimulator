@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class GolaGolaBody : MonoBehaviour
 {
+    [SerializeField] private float moveSpeed = 10f;
+
     Vector3 offset;
     bool isTwoFingersPressed;
     Vector3 originalPos;
@@ -21,8 +23,9 @@ public class GolaGolaBody : MonoBehaviour
     private void MoveToMouse()
     {
         if (Pointer.current == null) return;
-        
-        transform.position = GetPointerPos();
+
+        Vector3 targetPos = GetPointerPos();
+        transform.position = SmoothTo(transform.position, targetPos);
     }
 
     public void MobileControl()
@@ -34,16 +37,12 @@ public class GolaGolaBody : MonoBehaviour
 
         if (Pointer.current.press.isPressed)
         {
-            Vector2 delta = Pointer.current.delta.ReadValue();
-            if (delta.sqrMagnitude > 0.01f)
-            {
-                transform.position = GetPointerPos() + offset;
-            }
+            Vector3 targetPos = GetPointerPos() + offset;
+            transform.position = SmoothTo(transform.position, targetPos);
         }
 
         if (Touchscreen.current == null) return;
 
-        var allTouches = Touchscreen.current.touches;
         int activeTouchCount = 0;
 
         foreach (var touch in Touchscreen.current.touches)
@@ -56,13 +55,19 @@ public class GolaGolaBody : MonoBehaviour
             if (!isTwoFingersPressed)
             {
                 isTwoFingersPressed = true;
-                transform.position = originalPos;
             }
+            transform.position = SmoothTo(transform.position, originalPos);
         }
         else
         {
             isTwoFingersPressed = false;
         }
+    }
+
+    private Vector3 SmoothTo(Vector3 current, Vector3 target)
+    {
+        float t = 1f - Mathf.Exp(-moveSpeed * Time.deltaTime);
+        return Vector3.Lerp(current, target, t);
     }
 
     Vector3 GetPointerPos()
