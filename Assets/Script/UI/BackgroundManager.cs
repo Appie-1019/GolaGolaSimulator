@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public enum BackgroundSetterType
 {
-    Slider, InputField
+    None, Slider, FloatInputField, HexInput
 }
 
 public class BackgroundManager : MonoBehaviour
@@ -13,7 +13,8 @@ public class BackgroundManager : MonoBehaviour
 
     [Header("Setter")]
     public Slider[] sliders;
-    public InputFieldValueLimiter[] inputFields;
+    public InputFieldValueLimiter[] inputFieldsFloat;
+    public InputFieldHexLimiter inputFieldsHex;
     [Header("BackgroundPreview")]
     public Image backgroundPreview;
 
@@ -37,6 +38,8 @@ public class BackgroundManager : MonoBehaviour
         {
             slider.AddListener(OnSliderValueChanged);
         }
+
+        SetColor(Color.white);
     }
 
     public void OnSliderValueChanged(float uselessValue)
@@ -46,33 +49,47 @@ public class BackgroundManager : MonoBehaviour
 
     public void UpdateBackgroundUI(BackgroundSetterType signalFrom)
     {
+        Color newColor = Color.white;
+
         if (signalFrom == BackgroundSetterType.Slider)
         {
-            for (int i = 0; i < sliders.Length; i++)
-            {
-                if (inputFields[i] != null) inputFields[i].SetFloatToText(sliders[i].Value);
-            }
+            if (sliders[0] != null) newColor.r = sliders[0].Value;
+            if (sliders[1] != null) newColor.g = sliders[1].Value;
+            if (sliders[2] != null) newColor.b = sliders[2].Value;
         }
-        else if (signalFrom == BackgroundSetterType.InputField)
+        else if (signalFrom == BackgroundSetterType.FloatInputField)
         {
-            for (int i = 0; i < inputFields.Length; i++)
-            {
-                if (sliders[i] != null) sliders[i].SetValueWithoutNotify(float.Parse(inputFields[i].inputField.text));
-            }
+            newColor.r = float.Parse(inputFieldsFloat[0]?.inputField.text);
+            newColor.g = float.Parse(inputFieldsFloat[1]?.inputField.text);
+            newColor.b = float.Parse(inputFieldsFloat[2]?.inputField.text);
+
+        }
+        else if (signalFrom  == BackgroundSetterType.HexInput)
+        {
+            newColor = inputFieldsHex.currentColor;
         }
 
-        Color newColor = new Color(sliders[0].Value, sliders[1].Value, sliders[2].Value);
-        backgroundPreview.color = backgroundColor = Camera.main.backgroundColor = newColor;
+        SetColor(newColor, signalFrom);
     }
 
-    private void SetColor(Color newColor)
+    private void SetColor(Color newColor, BackgroundSetterType signalFrom = BackgroundSetterType.None)
     {
-        inputFields[0].SetFloatToText(newColor.r); 
-        inputFields[1].SetFloatToText(newColor.g); 
-        inputFields[2].SetFloatToText(newColor.b);
-        sliders[0].SetValueWithoutNotify(newColor.r);
-        sliders[1].SetValueWithoutNotify(newColor.g);
-        sliders[2].SetValueWithoutNotify(newColor.b);
+        if (signalFrom != BackgroundSetterType.FloatInputField)
+        {
+            inputFieldsFloat[0]?.SetFloatToText(newColor.r);
+            inputFieldsFloat[1]?.SetFloatToText(newColor.g);
+            inputFieldsFloat[2]?.SetFloatToText(newColor.b);
+        }
+        if (signalFrom != BackgroundSetterType.Slider)
+        {
+            sliders[0]?.SetValueWithoutNotify(newColor.r);
+            sliders[1]?.SetValueWithoutNotify(newColor.g);
+            sliders[2]?.SetValueWithoutNotify(newColor.b);
+        }
+        if (signalFrom != BackgroundSetterType.HexInput)
+        {
+            inputFieldsHex.SetHexFromColor(newColor);
+        }
 
         backgroundPreview.color = backgroundColor = Camera.main.backgroundColor = newColor;
     }

@@ -16,17 +16,13 @@ public class InputFieldValueLimiter : MonoBehaviour
             Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
             return;
         }
-        inputField.onValueChanged.AddListener(OnValueChanged);
+        inputField.onEndEdit.AddListener(CheckValue);
     }
 
-    private void Start()
+    public void CheckValue(string text = "")
     {
-        lastText = 0.1f.ToString();
-        inputField.SetTextWithoutNotify(0.1f.ToString());
-    }
+        if (string.IsNullOrEmpty(text)) text = inputField.text;
 
-    private void OnValueChanged(string text)
-    {
         if (string.IsNullOrEmpty(lastText) || !float.TryParse(text, out float value))
         {
             inputField.SetTextWithoutNotify(lastText);
@@ -35,7 +31,7 @@ public class InputFieldValueLimiter : MonoBehaviour
         {
             value = Mathf.Clamp(value, slider.MinValue, slider.MaxValue);
             SetFloatToText(value);
-            BackgroundManager.Instance?.UpdateBackgroundUI(BackgroundSetterType.InputField);
+            BackgroundManager.Instance?.UpdateBackgroundUI(BackgroundSetterType.FloatInputField);
         }
     }
 

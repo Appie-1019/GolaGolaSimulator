@@ -18,6 +18,7 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] private float rawPercent = 0.5f;
 
     private System.Action<float> onValueChanged;
+    private bool isDragInterrupted = false;
 
     /// <summary>
     /// 슬라이더의 현재 값.
@@ -57,6 +58,7 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
     /// <param name="eventData">포인터 이벤트 데이터</param>
     public void OnPointerDown(PointerEventData eventData)
     {
+        isDragInterrupted = false;
         UpdateSliderFromPointer(eventData);
     }
 
@@ -64,7 +66,19 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
     /// <param name="eventData">포인터 이벤트 데이터</param>
     public void OnDrag(PointerEventData eventData)
     {
+        if (isDragInterrupted)
+        {
+            eventData.pointerDrag = null;
+            return;
+        }
+
         UpdateSliderFromPointer(eventData);
+    }
+
+    /// <summary> 드래그를 강제로 해제 </summary>
+    public void ForceReleaseDrag()
+    {
+        isDragInterrupted = true;
     }
 
     /// <summary> <paramref name="eventData"/>를 기반으로 슬라이더 비율 계산 및 UI 갱신 </summary>
