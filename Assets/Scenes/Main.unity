@@ -4948,6 +4948,9 @@ MonoBehaviour:
   sliderR: {fileID: 2104796367}
   sliderG: {fileID: 1294696295}
   sliderB: {fileID: 196659816}
+  inputR: {fileID: 203086329}
+  inputG: {fileID: 190664643}
+  inputB: {fileID: 1392220325}
   color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1634812012
 GameObject:

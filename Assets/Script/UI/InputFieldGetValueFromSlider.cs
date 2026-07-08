@@ -7,6 +7,7 @@ public class InputFieldGetValueFromSlider : MonoBehaviour
     private TMP_InputField inputField;
 
     private string lastText = string.Empty;
+    private System.Action onValueChanged;
 
     private void Awake()
     {
@@ -47,6 +48,12 @@ public class InputFieldGetValueFromSlider : MonoBehaviour
         {
             value = Mathf.Clamp(value, slider.MinValue, slider.MaxValue);
             SetFloatToText(value);
+            onValueChanged.Invoke();
         }
+    }
+
+    public void AddListener(System.Action action)
+    {
+        onValueChanged += action;
     }
 }
