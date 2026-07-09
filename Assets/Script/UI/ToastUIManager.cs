@@ -37,7 +37,7 @@ public class ToastUIManager : MonoBehaviour
     public Transform canvas;
 
     private List<ToastUI> toastUIs = new List<ToastUI>();
-
+    private readonly Color DefaultTextColor = Color.white;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -61,11 +61,11 @@ public class ToastUIManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         if (!DataManager.isMobile)
         {
-            AddToast("마우스를 움직여 GolaGola");
+            AddToast("마우스를 움직여 GolaGola", Color.yellow);
             yield return new WaitForSeconds(3f);
-            AddToast("[M] : 눌러서 마우스 숨기기 토글");
+            AddToast("[M] : 눌러서 마우스 숨기기 토글", Color.yellow);
             yield return new WaitForSeconds(3f);
-            AddToast("[TAB] : 눌러서 메뉴 토글");
+            AddToast("[TAB] : 눌러서 메뉴 토글", Color.yellow);
         }
         else
         {
@@ -79,11 +79,17 @@ public class ToastUIManager : MonoBehaviour
     /// <param name="messege">토스트 메시지의 글자</param>
     public void AddToast(string messege)
     {
+        AddToast(messege, DefaultTextColor);
+    }
+
+    public void AddToast(string messege, Color textColor)
+    {
         if (!DataManager.CanToast) return;
 
         StackAllToast();
         ToastUI newMessegeUI = Instantiate(toastMessege, canvas);
         newMessegeUI.SetData(data);
+        newMessegeUI.SetTextColor(textColor);
         newMessegeUI.Show(messege);
         toastUIs.Add(newMessegeUI);
     }

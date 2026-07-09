@@ -5,13 +5,25 @@ public class GolaGolaParts : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private Vector2 targetOffset;
     [SerializeField] private float angleOffset;
+    [HideInInspector] public Vector3 offset;
 
-    void Update()
+    private void Awake()
     {
-        if (target != null)
+        if (target == null)
         {
-            LookAtPos((Vector2)target.position + targetOffset);
+            Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
+            return;
         }
+    }
+
+    private void Start()
+    {
+        offset = transform.position;
+    }
+
+    private void LateUpdate()
+    {
+        LookAtPos((Vector2)target.position + targetOffset);
     }
 
     private void LookAtPos(Vector2 pos)
