@@ -113,7 +113,7 @@ public class UISpreader : MonoBehaviour
         {
             float currentActDuration = actDurtaion - timeReduction;
             UIRect.DOScale(targetScale, currentActDuration).SetEase(Ease.OutQuad);
-            UIRect.DOSizeDelta(targetSizeDelta, currentActDuration).SetEase(Ease.OutQuad).OnComplete(() => { UIRect.sizeDelta += Vector2.one * 0.005f; });
+            UIRect.DOSizeDelta(targetSizeDelta, currentActDuration).SetEase(Ease.OutQuad).OnComplete(() => { UIRect.sizeDelta += Vector2.one * 0.002f; });
 
             rect.DORotate(targetRotation, currentActDuration).SetEase(Ease.OutQuad);
 
