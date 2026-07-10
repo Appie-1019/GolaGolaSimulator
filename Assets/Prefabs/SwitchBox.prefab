@@ -59,7 +59,7 @@ MonoBehaviour:
   sections:
   - SectionID: 0
     DisplayName: Section Name
-  Text: {fileID: 0}
+  Text: {fileID: 5009584417936045262}
 --- !u!222 &601346912706092915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 40
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

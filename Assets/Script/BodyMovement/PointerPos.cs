@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GolaGolaBodyPos : MonoBehaviour
+public class PointerPos : MonoBehaviour
 {
-    public static GolaGolaBodyPos Instance { get; private set; }
-    public static bool canMove = true;
+    public static PointerPos Instance { get; private set; }
 
     Vector3 offset;
     Vector3 originalPos;
@@ -24,10 +23,8 @@ public class GolaGolaBodyPos : MonoBehaviour
         originalPos = transform.position;
     }
 
-    void Update()
+    public void UpdatePosition()
     {
-        if (!canMove || MenuPanelToggle.isPanelOpen) return;
-
         if (DataManager.isMobile) MobileControl();
         else MouseControl();
     }
@@ -66,5 +63,10 @@ public class GolaGolaBodyPos : MonoBehaviour
 
         mouseWorldPos.z = 0f;
         return mouseWorldPos;
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = originalPos;
     }
 }

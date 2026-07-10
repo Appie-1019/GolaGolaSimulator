@@ -5,37 +5,55 @@ public class GolaGolaBody : MonoBehaviour
 {
     public Transform target;
 
-    Vector2 seizureOffset;
+    Coroutine spinCoroutine;
+    Vector3 originalPos;
 
     private void Start()
     {
-        //StartCoroutine(SetSeizureOffset());
+        originalPos = transform.position;
     }
 
-
-    private void LateUpdate()
+    public void StartSpin()
     {
-        DefaultMovement();
-        //Seizure();
+        StopSpin();
+        spinCoroutine = StartCoroutine(Spin());
     }
 
-    void DefaultMovement()
+    public void StopSpin()
     {
-        transform.position = target.position;
+        if (spinCoroutine == null) return;
+        StopCoroutine(spinCoroutine);
+        spinCoroutine = null;
     }
 
-    void Seizure()
+    IEnumerator Spin()
     {
-        transform.position = target.position + (Vector3)seizureOffset;
-    }
-
-    IEnumerator SetSeizureOffset()
-    {
-        float interval = 0.1f;
         while (true)
         {
-            seizureOffset = Random.insideUnitCircle * Random.value;
-            yield return new WaitForSeconds(interval);
+            transform.Rotate(0, 0, -340 * Time.deltaTime);
+            yield return null;
         }
+    }
+
+    //void Seizure()
+    //{
+    //    transform.position = target.position + (Vector3)seizureOffset;
+    //}
+
+    //IEnumerator SetSeizureOffset()
+    //{
+    //    float interval = 0.1f;
+    //    while (true)
+    //    {
+    //        seizureOffset = Random.insideUnitCircle * Random.value;
+    //        yield return new WaitForSeconds(interval);
+    //    }
+    //}
+
+    public void ResetPosition()
+    {
+        StopSpin();
+        transform.rotation = Quaternion.identity;
+        transform.position = originalPos;
     }
 }
