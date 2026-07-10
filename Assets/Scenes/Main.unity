@@ -1823,7 +1823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854e662096d61ec44a213becaca1ad7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UISpreader
-  closeAtStart: 1
+  OpenAtStart: 0
+  clickCooldown: 0.3
   UIRect: {fileID: 1192252510}
   actDurtaion: 0.2
   iconImage: {fileID: 345617665}
@@ -1832,6 +1833,8 @@ MonoBehaviour:
   pressedScale: 0.6
   reductionDuration: 0.15
   expansionDuration: 0.15
+  ChildSpreaders: []
+  extraReducedObject: []
 --- !u!114 &345617668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3689,7 +3692,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 432.4}
+  m_SizeDelta: {x: 100, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1027917079
 GameObject:
@@ -4512,7 +4515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854e662096d61ec44a213becaca1ad7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UISpreader
-  closeAtStart: 1
+  OpenAtStart: 0
+  clickCooldown: 0.3
   UIRect: {fileID: 661169746}
   actDurtaion: 0.2
   iconImage: {fileID: 1290100499}
@@ -4521,6 +4525,8 @@ MonoBehaviour:
   pressedScale: 0.6
   reductionDuration: 0.15
   expansionDuration: 0.15
+  ChildSpreaders: []
+  extraReducedObject: []
 --- !u!1 &1293605571
 GameObject:
   m_ObjectHideFlags: 0
@@ -6004,8 +6010,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<sprite name=\"TextTriangle\"> \uBC84\uD2BC\uC744 \uB20C\uB7EC \uBA54\uB274\uB97C
-    \uD3BC\uCE60 \uC218 \uC788\uC2B5\uB2C8\uB2E4"
+  m_text: "<sprite name=\"TextTriangle\"> \uBC84\uD2BC\uC744 \uB20C\uB7EC \uD3BC\uCE60
+    \uC218 \uC788\uC2B5\uB2C8\uB2E4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ac98e85c0469c34bbeda1ff6a74163b, type: 2}
   m_sharedMaterial: {fileID: 5249345862805526972, guid: 6ac98e85c0469c34bbeda1ff6a74163b, type: 2}
@@ -6338,7 +6344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854e662096d61ec44a213becaca1ad7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UISpreader
-  closeAtStart: 1
+  OpenAtStart: 0
+  clickCooldown: 0.3
   UIRect: {fileID: 1293605572}
   actDurtaion: 0.2
   iconImage: {fileID: 1599735866}
@@ -6347,6 +6354,18 @@ MonoBehaviour:
   pressedScale: 0.6
   reductionDuration: 0.15
   expansionDuration: 0.15
+  ChildSpreaders:
+  - {fileID: 1290100501}
+  - {fileID: 345617667}
+  extraReducedObject:
+  - {fileID: 491143589}
+  - {fileID: 232141637}
+  - {fileID: 2122712321}
+  - {fileID: 216949433}
+  - {fileID: 1084137204}
+  - {fileID: 592337925}
+  - {fileID: 1703568051}
+  - {fileID: 1394929970}
 --- !u!1 &1619934581
 GameObject:
   m_ObjectHideFlags: 0
