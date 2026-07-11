@@ -9,7 +9,7 @@ public class GolaGolaBody : MonoBehaviour
     [HideInInspector] public bool inertia = false;
 
     Coroutine spinCoroutine;
-    Vector3 originalPos;
+    [HideInInspector] public Vector3 originalPos;
     Quaternion originalRotation;
     Rigidbody2D rb;
 
@@ -58,21 +58,6 @@ public class GolaGolaBody : MonoBehaviour
             yield return null;
         }
     }
-
-    //void Seizure()
-    //{
-    //    transform.position = target.position + (Vector3)seizureOffset;
-    //}
-
-    //IEnumerator SetSeizureOffset()
-    //{
-    //    float interval = 0.1f;
-    //    while (true)
-    //    {
-    //        seizureOffset = Random.insideUnitCircle * Random.value;
-    //        yield return new WaitForSeconds(interval);
-    //    }
-    //}
 
     private void Move_Inertia()
     {

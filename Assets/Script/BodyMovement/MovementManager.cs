@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public enum MovementType
@@ -22,9 +23,12 @@ public class MovementManager : MonoBehaviour
     public PointerPos pointer;
     public GolaGolaBody body;
     public GolaGolaParts[] parts;
+    public GameObject ThatBox;
 
     private MovementType currentType;
-    
+    private Vector3 seizureOffset;
+    private Coroutine movementCoroutine;
+
     public static MovementManager Instance { get; private set; }
 
     private void Awake()
@@ -47,6 +51,7 @@ public class MovementManager : MonoBehaviour
 
     private void Start()
     {
+        ThatBox.SetActive(false);
         SetMovementState(MovementType.Default);
     }
 
@@ -70,11 +75,28 @@ public class MovementManager : MonoBehaviour
 
     public void SetMovementState(MovementType type)
     {
+        if (movementCoroutine != null)
+        {
+            StopCoroutine(movementCoroutine);
+            movementCoroutine = null;
+        }
+
         pointer.ResetAll();
         body.ResetAll();
         foreach (GolaGolaParts part in parts)
         {
             part.ResetAll();
+        }
+
+        if (currentType == MovementType.AppieSlide)
+        {
+            ThatBox.SetActive(false);
+
+            body.gameObject.SetActive(true);
+            foreach (GolaGolaParts part in parts)
+            {
+                part.gameObject.SetActive(true);
+            }
         }
 
         currentType = type;
@@ -83,6 +105,22 @@ public class MovementManager : MonoBehaviour
         {
             case MovementType.Inertia:
                 body.inertia = true;
+                break;
+            case MovementType.Seizure:
+                movementCoroutine = StartCoroutine(SetSeizureOffset());
+                break;
+            case MovementType.NicePC:
+                movementCoroutine = StartCoroutine(Move_NicePC());
+                break;
+            case MovementType.AppieSlide:
+                ThatBox.SetActive(true);
+                ThatBox.transform.position = body.originalPos;
+
+                body.gameObject.SetActive(false);
+                foreach (GolaGolaParts part in parts)
+                {
+                    part.gameObject.SetActive(false);
+                }
                 break;
         }
     }
@@ -158,26 +196,67 @@ public class MovementManager : MonoBehaviour
 
     void Move_AppieSlide()
     {
-
+        pointer.UpdatePosition();
     }
 
     void Move_Seizure()
     {
+        pointer.UpdatePosition();
+        body.transform.position = pointer.transform.position + seizureOffset;
 
+        foreach (GolaGolaParts part in parts)
+        {
+            part.LookAtBody();
+        }
+    }
+
+    IEnumerator SetSeizureOffset()
+    {
+        float interval = 0.1f;
+        while (true)
+        {
+            seizureOffset = Random.insideUnitCircle * Random.value * 2;
+            yield return new WaitForSeconds(interval);
+        }
     }
 
     void Move_Statue()
     {
+        pointer.UpdatePosition();
+        body.GotoPointer();
 
+        foreach (GolaGolaParts part in parts)
+        {
+            part.transform.position = pointer.transform.position + part.offset;
+            part.LookAtBody();
+        }
     }
 
     void Move_Tracking()
     {
+        pointer.UpdatePosition();
+        body.GotoPointer();
 
+        foreach (GolaGolaParts part in parts)
+        {
+            part.transform.position = Vector2.Lerp(part.transform.position, pointer.transform.position + part.offset, 5 * Time.deltaTime);
+            part.LookAtBody();
+        }
     }
 
-    void Move_NicePC()
+    IEnumerator Move_NicePC()
     {
+        while (true)
+        {
+            pointer.UpdatePosition();
+            body.GotoPointer();
 
+            foreach (GolaGolaParts part in parts)
+            {
+                part.LookAtBody();
+            }
+
+            yield return new WaitForSeconds(Random.value / 2);
+        }
     }
 }

@@ -1228,6 +1228,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232141636}
   m_CullTransparentMesh: 1
+--- !u!50 &234601759
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149254619212}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &234601760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149254619212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c040a6e3b8f73548a9ad08a4b17f53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThatBox
+  pointer: {fileID: 828549517}
+  rb: {fileID: 234601759}
 --- !u!1 &236788107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,6 +2553,7 @@ MonoBehaviour:
   - {fileID: 17498366}
   - {fileID: 632546444}
   - {fileID: 1565125583}
+  ThatBox: {fileID: 919132149254619212}
 --- !u!1 &519563916
 GameObject:
   m_ObjectHideFlags: 0
@@ -7184,22 +7226,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SwitchBoxDescription
   switchBox: {fileID: 1415164755}
   description:
-  - "\uAE30\uBCF8 : \uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774 \uC774\uB3D9\uD569\uB2C8\uB2E4."
-  - "\uAD00\uC131 : \uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774 \uBE68\uB824\uB4E4\uC5B4\uAC00\uB4EF
+  - "\uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  - "\uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774 \uBE68\uB824\uB4E4\uC5B4\uAC00\uB4EF
     \uC6C0\uC9C1\uC785\uB2C8\uB2E4. "
-  - "\uBD80\uB4DC\uB7FD\uAC8C : \uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774
-    \uBD80\uB4DC\uB7FD\uAC8C \uC774\uB3D9\uD569\uB2C8\uB2E4."
-  - "\uD68C\uC804 : \uBAB8\uD1B5\uC774 \uD68C\uC804\uD569\uB2C8\uB2E4."
-  - "\uBC18\uC804 : \uBAB8\uD1B5 \uB300\uC2E0 \uD314, \uB2E4\uB9AC\uB97C \uC870\uC791\uD569\uB2C8\uB2E4."
-  - "\uC560\uD53C \uC2AC\uB77C\uC774\uB4DC : \uC800\uB294 \uC560\uD53C\uC5D0\uC694!
-    \uC885\uC774\uBD09\uD22C\uC8E0!"
-  - "\uBC1C\uC791 : \uD3EC\uC778\uD130 \uC8FC\uBCC0 \uB79C\uB364\uD55C \uACF5\uAC04\uC73C\uB85C
+  - "\uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774 \uBD80\uB4DC\uB7FD\uAC8C
+    \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  - "\uBAB8\uD1B5\uC774 \uD68C\uC804\uD569\uB2C8\uB2E4."
+  - "\uBAB8\uD1B5 \uB300\uC2E0 \uD314, \uB2E4\uB9AC\uB97C \uC870\uC791\uD569\uB2C8\uB2E4."
+  - "\uADF8\uAC00 \uC18D\uB3C4\uB97C \uBAA8\uC73C\uACE0 \uC788\uC2B5\uB2C8\uB2E4!"
+  - "\uD3EC\uC778\uD130 \uC8FC\uBCC0 \uB79C\uB364\uD55C \uACF5\uAC04\uC73C\uB85C
     \uC8FC\uAE30\uC801\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
-  - "\uB3D9\uC0C1 : \uBAA8\uB4E0 \uBD80\uBD84\uC774 \uD3EC\uC778\uD130\uB97C \uB530\uB77C\uC635\uB2C8\uB2E4."
-  - "\uCD94\uC801 : \uD314, \uB2E4\uB9AC\uAC00 \uBAB8\uD1B5\uC744 \uAE30\uC900\uC73C\uB85C
-    \uBD80\uB4DC\uB7FD\uAC8C \uC774\uB3D9\uD569\uB2C8\uB2E4. "
-  - "\uB098\uC774\uC2A4\uD55C \uCEF4\uD4E8\uD130 : \uBAB8\uD1B5\uC758 \uC704\uCE58
-    \uC774\uB3D9\uC774 \uC27D\uAC8C \uC774\uB8E8\uC5B4\uC9C0\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+  - "\uBAA8\uB4E0 \uBD80\uBD84\uC774 \uACE0\uC815\uB41C \uCC44\uB85C \uD3EC\uC778\uD130\uB97C
+    \uB530\uB77C\uC635\uB2C8\uB2E4."
+  - "\uD314, \uB2E4\uB9AC\uAC00 \uBAB8\uD1B5\uC744 \uAE30\uC900\uC73C\uB85C \uBD80\uB4DC\uB7FD\uAC8C
+    \uC774\uB3D9\uD569\uB2C8\uB2E4. "
+  - "\uBA54\uBAA8\uB9AC\uAC00 \uBD80\uC871\uD560 \uC815\uB3C4\uB85C \uACE0\uAE09
+    \uC6C0\uC9C1\uC784\uC744 \uC2DC\uB3C4\uD569\uB2C8\uB2E4."
 --- !u!1 &1565125580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7690,6 +7732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaBody
   pointer: {fileID: 828549518}
   inertia: 0
+  originalPos: {x: 0, y: 0, z: 0}
 --- !u!50 &1701025714
 Rigidbody2D:
   serializedVersion: 5
@@ -8815,6 +8858,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122712320}
   m_CullTransparentMesh: 1
+--- !u!4 &543450653507640054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149254619212}
+  serializedVersion: 2
+  m_LocalRotation: {x: 6.1232336e-17, y: 1, z: 6.1232336e-17, w: 0.00000004371139}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &919132149254619212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543450653507640054}
+  - component: {fileID: 234601760}
+  - component: {fileID: 3469287837424801107}
+  - component: {fileID: 1711813855846932889}
+  - component: {fileID: 234601759}
+  m_Layer: 0
+  m_Name: ThatBox_LowPoly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1711813855846932889
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149254619212}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -876546973899608171, guid: 3cc008b022f22e741b7fe9c1b6bad392, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &3469287837424801107
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149254619212}
+  m_Mesh: {fileID: -5246711248036785622, guid: 3cc008b022f22e741b7fe9c1b6bad392, type: 3}
 --- !u!1001 &8283877113834330298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8926,3 +9061,4 @@ SceneRoots:
   - {fileID: 1565125582}
   - {fileID: 828549518}
   - {fileID: 499278268}
+  - {fileID: 543450653507640054}
