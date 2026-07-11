@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
   target: {fileID: 770599425}
   angleOffset: -90
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &97223061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747631852824513571, guid: b08128038104362479d94d6f73480342, type: 3}
       propertyPath: sections.Array.data[9].DisplayName
-      value: "\uC88B\uC740 \uCEF4\uD4E8\uD130"
+      value: "\uB098\uC774\uC2A4\uD55C \uCEF4\uD4E8\uD130"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2391,6 +2392,7 @@ GameObject:
   - component: {fileID: 499278272}
   - component: {fileID: 499278273}
   - component: {fileID: 499278274}
+  - component: {fileID: 499278275}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2490,6 +2492,26 @@ MonoBehaviour:
   inputFieldsHex: {fileID: 718277860}
   backgroundPreview: {fileID: 1619934583}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &499278275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499278267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa9fb6d29a9c4abe31362a72b6281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementManager
+  switchBox: {fileID: 1415164755}
+  pointer: {fileID: 828549519}
+  body: {fileID: 1701025713}
+  parts:
+  - {fileID: 1360070084}
+  - {fileID: 17498366}
+  - {fileID: 632546444}
+  - {fileID: 1565125583}
 --- !u!1 &519563916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,6 +3047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
   target: {fileID: 2068123014}
   angleOffset: -90
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &661169745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3768,7 +3791,7 @@ GameObject:
   - component: {fileID: 828549518}
   - component: {fileID: 828549519}
   m_Layer: 0
-  m_Name: BodyPosition
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5891,6 +5914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
   target: {fileID: 1255727929}
   angleOffset: -90
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1392220320
 GameObject:
   m_ObjectHideFlags: 0
@@ -7044,7 +7068,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -140}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1564015655
 MonoBehaviour:
@@ -7066,8 +7090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBC1C\uC791 : \uD3EC\uC778\uD130 \uC8FC\uBCC0 \uB79C\uB364\uD55C \uACF5\uAC04\uC73C\uB85C
-    \uC8FC\uAE30\uC801\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  m_text: Description
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ac98e85c0469c34bbeda1ff6a74163b, type: 2}
   m_sharedMaterial: {fileID: 5249345862805526972, guid: 6ac98e85c0469c34bbeda1ff6a74163b, type: 2}
@@ -7094,12 +7117,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
+  m_fontSize: 27.75
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 17
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -7165,7 +7188,7 @@ MonoBehaviour:
   - "\uAD00\uC131 : \uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774 \uBE68\uB824\uB4E4\uC5B4\uAC00\uB4EF
     \uC6C0\uC9C1\uC785\uB2C8\uB2E4. "
   - "\uBD80\uB4DC\uB7FD\uAC8C : \uD3EC\uC778\uD130 \uC704\uCE58\uB85C \uBAB8\uD1B5\uC774
-    \uBD80\uB4DC\uB7FD\uAC8C \uC774\uB3D9\uD569\uB2C8\uB2E4. "
+    \uBD80\uB4DC\uB7FD\uAC8C \uC774\uB3D9\uD569\uB2C8\uB2E4."
   - "\uD68C\uC804 : \uBAB8\uD1B5\uC774 \uD68C\uC804\uD569\uB2C8\uB2E4."
   - "\uBC18\uC804 : \uBAB8\uD1B5 \uB300\uC2E0 \uD314, \uB2E4\uB9AC\uB97C \uC870\uC791\uD569\uB2C8\uB2E4."
   - "\uC560\uD53C \uC2AC\uB77C\uC774\uB4DC : \uC800\uB294 \uC560\uD53C\uC5D0\uC694!
@@ -7175,8 +7198,8 @@ MonoBehaviour:
   - "\uB3D9\uC0C1 : \uBAA8\uB4E0 \uBD80\uBD84\uC774 \uD3EC\uC778\uD130\uB97C \uB530\uB77C\uC635\uB2C8\uB2E4."
   - "\uCD94\uC801 : \uD314, \uB2E4\uB9AC\uAC00 \uBAB8\uD1B5\uC744 \uAE30\uC900\uC73C\uB85C
     \uBD80\uB4DC\uB7FD\uAC8C \uC774\uB3D9\uD569\uB2C8\uB2E4. "
-  - "\uC88B\uC740 \uCEF4\uD4E8\uD130 : \uBAB8\uD1B5\uC774 \uAC04\uD5D0\uC801\uC73C\uB85C
-    \uC81C\uC790\uB9AC\uC5D0 \uBA48\uCDA5\uB2C8\uB2E4."
+  - "\uB098\uC774\uC2A4\uD55C \uCEF4\uD4E8\uD130 : \uBAB8\uD1B5\uC758 \uC704\uCE58
+    \uC774\uB3D9\uC774 \uC27D\uAC8C \uC774\uB8E8\uC5B4\uC9C0\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
 --- !u!1 &1565125580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7283,6 +7306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaParts
   target: {fileID: 581023478}
   angleOffset: -90
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1599735863
 GameObject:
   m_ObjectHideFlags: 0
@@ -7624,6 +7648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701025712}
   - component: {fileID: 1701025713}
+  - component: {fileID: 1701025714}
   m_Layer: 0
   m_Name: GolaBody
   m_TagString: Untagged
@@ -7663,7 +7688,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71605a0798eeaf945b8272da559bff07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GolaGolaBody
-  target: {fileID: 828549518}
+  pointer: {fileID: 828549518}
+  inertia: 0
+--- !u!50 &1701025714
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701025711}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1703568050
 GameObject:
   m_ObjectHideFlags: 0

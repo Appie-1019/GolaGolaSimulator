@@ -16,10 +16,6 @@ public class PointerPos : MonoBehaviour
             return;
         }
         Instance = this;
-    }
-
-    private void Start()
-    {
         originalPos = transform.position;
     }
 
@@ -65,7 +61,7 @@ public class PointerPos : MonoBehaviour
         return mouseWorldPos;
     }
 
-    public void ResetPosition()
+    public void ResetAll()
     {
         transform.position = originalPos;
     }

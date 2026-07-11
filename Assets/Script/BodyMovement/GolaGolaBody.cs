@@ -1,22 +1,46 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class GolaGolaBody : MonoBehaviour
 {
-    public Transform target;
+    public Transform pointer;
+
+    [HideInInspector] public bool inertia = false;
 
     Coroutine spinCoroutine;
     Vector3 originalPos;
+    Quaternion originalRotation;
+    Rigidbody2D rb;
 
-    private void Start()
+    private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
+            this.enabled = false;
+            return;
+        }
+
         originalPos = transform.position;
+        originalRotation = transform.rotation;
+    }
+
+    private void FixedUpdate()
+    {
+        if (inertia) Move_Inertia();
     }
 
     public void StartSpin()
     {
         StopSpin();
         spinCoroutine = StartCoroutine(Spin());
+    }
+
+    public void GotoPointer()
+    {
+        transform.position = pointer.position;
     }
 
     public void StopSpin()
@@ -50,10 +74,24 @@ public class GolaGolaBody : MonoBehaviour
     //    }
     //}
 
-    public void ResetPosition()
+    private void Move_Inertia()
     {
+        if (pointer == null) return;
+
+        Vector3 springForce = (pointer.position - transform.position) * 200;
+        Vector3 dampingForce = rb.linearVelocity * 5;
+        Vector3 finalForce = springForce - dampingForce;
+
+        rb.AddForce(finalForce);
+    }
+
+    public void ResetAll()
+    {
+        inertia = false;
+        rb.linearVelocity = Vector2.zero;
         StopSpin();
-        transform.rotation = Quaternion.identity;
+
+        transform.rotation = originalRotation;
         transform.position = originalPos;
     }
 }
