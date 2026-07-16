@@ -16,9 +16,10 @@ public class SwitchBox : MonoBehaviour
     [Header("Parts")]
     [SerializeField] private TextMeshProUGUI Text;
 
+    public SwitchBoxSection currentData;
+
     System.Action<int> intToggleListener;
     System.Action<SwitchBoxSection> switchBoxDataToggleListener;
-    SwitchBoxSection currentData;
     int index;
 
     private void Reset()

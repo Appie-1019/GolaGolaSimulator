@@ -88,18 +88,26 @@ public class MovementManager : MonoBehaviour
             part.ResetAll();
         }
 
+        currentType = type;
+
         if (currentType == MovementType.AppieSlide)
         {
-            ThatBox.SetActive(false);
-
+            body.gameObject.SetActive(false);
+            foreach (GolaGolaParts part in parts)
+            {
+                part.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
             body.gameObject.SetActive(true);
             foreach (GolaGolaParts part in parts)
             {
                 part.gameObject.SetActive(true);
             }
         }
-
-        currentType = type;
+        
+        ThatBox.SetActive(false);
 
         switch (currentType)
         {
@@ -115,12 +123,6 @@ public class MovementManager : MonoBehaviour
             case MovementType.AppieSlide:
                 ThatBox.SetActive(true);
                 ThatBox.transform.position = body.originalPos;
-
-                body.gameObject.SetActive(false);
-                foreach (GolaGolaParts part in parts)
-                {
-                    part.gameObject.SetActive(false);
-                }
                 break;
         }
     }
