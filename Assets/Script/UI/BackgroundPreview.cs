@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class BackgroundPreview : MonoBehaviour
     public Slider sliderG;
     public Slider sliderB;
     private Image image;
+    [HideInInspector] public Color color;
 
     private void Awake()
     {
@@ -40,7 +42,32 @@ public class BackgroundPreview : MonoBehaviour
     private void ChaingeImage()
     {
         Color newColor = new Color(sliderR.Value, sliderG.Value, sliderB.Value);
-        image.color = newColor;
+        color = image.color = newColor;
         BackGroundManager.Instance?.SetBackgroundColor(newColor);
+    }
+
+    public void DoARainbow()
+    {
+        StartCoroutine(RainbowBackGround());
+    }
+
+    IEnumerator RainbowBackGround()
+    {
+        float hue = 0f;
+
+        while (true)
+        {
+            hue += Time.deltaTime;
+
+            if (hue > 1f) hue -= 1f;
+
+            Color nextColor = Color.HSVToRGB(hue, 1f, 1f);
+            sliderR.Value = nextColor.r;
+            sliderG.Value = nextColor.g;
+            sliderB.Value = nextColor.b;
+            color = nextColor;
+
+            yield return null;
+        }
     }
 }
