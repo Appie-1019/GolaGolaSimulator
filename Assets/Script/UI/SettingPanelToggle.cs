@@ -1,5 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class SettingPanelToggle : MonoBehaviour
@@ -10,7 +12,8 @@ public class SettingPanelToggle : MonoBehaviour
 
     public bool DisableOnStart = true;
 
-    bool isPanelOpen = false;
+    private bool isPanelOpen = false;
+    private float lastClickTime;
 
     private void Start()
     {
@@ -23,9 +26,29 @@ public class SettingPanelToggle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (DataManager.isMobile)
         {
-            ToggleSettingPanel();
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
+
+            if (Pointer.current.press.wasPressedThisFrame)
+            {
+                if (Time.time - lastClickTime < 0.2f)
+                {
+                    ToggleSettingPanel();
+                    lastClickTime = 0;
+                }
+                else
+                {
+                    lastClickTime = Time.time;
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ToggleSettingPanel();
+            }
         }
     }
 
@@ -41,5 +64,12 @@ public class SettingPanelToggle : MonoBehaviour
         settingPanel.blocksRaycasts = isPanelOpen;
 
         if (isPanelOpen) settingScrollRect.verticalNormalizedPosition = 1f;
+        else
+        {
+            if (EventSystem.current != null)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+            }
+        }
     }
 }

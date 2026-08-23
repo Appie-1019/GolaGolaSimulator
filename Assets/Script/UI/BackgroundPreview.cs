@@ -7,6 +7,10 @@ public class BackgroundPreview : MonoBehaviour
     public Slider sliderR;
     public Slider sliderG;
     public Slider sliderB;
+    public InputFieldGetValueFromSlider inputR;
+    public InputFieldGetValueFromSlider inputG;
+    public InputFieldGetValueFromSlider inputB;
+
     private Image image;
     [HideInInspector] public Color color;
 
@@ -22,7 +26,8 @@ public class BackgroundPreview : MonoBehaviour
 
     private void Start()
     {
-        if (sliderR == null || sliderG == null || sliderB == null)
+        if (sliderR == null || sliderG == null || sliderB == null||
+            inputR == null || inputG == null || inputB == null)
         {
             Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
             return;
@@ -31,10 +36,18 @@ public class BackgroundPreview : MonoBehaviour
         sliderR.AddListener(OnValueChainged);
         sliderG.AddListener(OnValueChainged);
         sliderB.AddListener(OnValueChainged);
+        inputR.AddListener(OnValueChainged);
+        inputG.AddListener(OnValueChainged);
+        inputB.AddListener(OnValueChainged);
         ChaingeImage();
     }
 
     private void OnValueChainged(float UselessValue)
+    {
+        ChaingeImage();
+    }
+
+    private void OnValueChainged()
     {
         ChaingeImage();
     }

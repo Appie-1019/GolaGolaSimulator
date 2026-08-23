@@ -31,6 +31,8 @@ public class ToastUI : MonoBehaviour
     /// <param name="messageText">표시할 글자</param>
     public void Show(string messageText)
     {
+        transform.SetAsLastSibling();
+
         if (isDestroying) return;
         if (string.IsNullOrWhiteSpace(messageText))
         {
