@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
@@ -7,7 +8,15 @@ public class DataManager : MonoBehaviour
     public static bool CanToast { get; private set; }
     public static bool isMobile { get; private set; }
 
+    [Header("Mobile UI Raycast Set")]
+    [SerializeField] private Image[] mobileRaycastDisabledImages;
+    [Header("Mobile Gameobject Enable/Disable Set")]
+    [SerializeField] private GameObject[] mobileEnabledGameObjects;
+    [SerializeField] private GameObject[] mobileDisabledGameObjects;
+    [Header("Setting")]
     public ToggleSwitch toastToggleSwitch;
+    //[Header("Debug")]
+    //public bool moblie = true;
 
     private void Awake()
     {
@@ -18,14 +27,46 @@ public class DataManager : MonoBehaviour
         }
         Instance = this;
 
-        //isMobile = true;
         isMobile = IsMobileDevice();
+        DisableRaycastForMobile();
+        DisableGameobjectForMoblie();
+        EnableGameobjectForMoblie();
     }
 
     void Start()
     {
         toastToggleSwitch.AddToggleListener((isOn) => { CanToast = isOn; });
         CanToast = toastToggleSwitch.isEnable;
+    }
+
+    private void DisableRaycastForMobile()
+    {
+        if (mobileRaycastDisabledImages == null || mobileRaycastDisabledImages.Length == 0) return;
+
+        foreach (Image img in mobileRaycastDisabledImages)
+        {
+            if (img != null) img.raycastTarget = !isMobile;
+        }
+    }
+
+    private void DisableGameobjectForMoblie()
+    {
+        if (mobileDisabledGameObjects == null || mobileDisabledGameObjects.Length == 0) return;
+
+        foreach (GameObject gameObject in mobileDisabledGameObjects)
+        {
+            if (gameObject != null) gameObject.SetActive(!isMobile);
+        }
+    }
+
+    private void EnableGameobjectForMoblie()
+    {
+        if (mobileEnabledGameObjects == null || mobileEnabledGameObjects.Length == 0) return;
+
+        foreach (GameObject gameObject in mobileEnabledGameObjects)
+        {
+            if (gameObject != null) gameObject.SetActive(isMobile);
+        }
     }
 
     /// <summary> 현재 접속한 기기 종류 판단 </summary>

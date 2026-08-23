@@ -61,15 +61,17 @@ public class ToastUIManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         if (!DataManager.isMobile)
         {
+            AddToast("마우스를 움직여 GolaGola");
+            yield return new WaitForSeconds(3f);
             AddToast("[M] : 눌러서 마우스 숨기기 토글");
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(3f);
             AddToast("[TAB] : 눌러서 메뉴 토글");
         }
         else
         {
-            AddToast("두 손가락으로 탭해 중앙으로 돌아가기");
-            yield return new WaitForSeconds(2.5f);
-            AddToast("더블 탭으로 메뉴 토글");
+            AddToast("화면을 드래그하여 GolaGola");
+            yield return new WaitForSeconds(3f);
+            AddToast("두 손가락으로 꾹 눌러 메뉴 토글");
         }
     }
 
