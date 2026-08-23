@@ -61,6 +61,8 @@ public class ToastUI : MonoBehaviour
         destroyCoroutine = StartCoroutine(DestroyTimer());
     }
 
+    public void SetTextColor(Color newColor) => message.color = newColor;
+
     /// <summary> 파괴 시간 대기 후 <see cref="DestroyImmediately"/> 호출 </summary>
     IEnumerator DestroyTimer()
     {

@@ -30,6 +30,7 @@ public class ToggleSwitch : MonoBehaviour
         {
             Debug.LogError(gameObject.name + "은(는) Dot가 없음.");
             this.enabled = false;
+            return;
         }
 
         button = GetComponent<Button>();
@@ -41,12 +42,14 @@ public class ToggleSwitch : MonoBehaviour
         {
             Debug.LogError(gameObject.name + "은(는) Button 컴포넌트가 필요함.");
             this.enabled = false;
+            return;
         }
 
         if (backgroundImage == null)
         {
             Debug.LogError(gameObject.name + "은(는) backgroundImage가 없음.");
             this.enabled = false;
+            return;
         }
 
         InitEnable(EnableAsStart);
