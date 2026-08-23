@@ -12,7 +12,8 @@ public enum MovementType
     Seizure = 6,
     Statue = 7,
     Tracking = 8,
-    NicePC = 9
+    NicePC = 9,
+    FatAppie = 10
 }
 
 public class MovementManager : MonoBehaviour
@@ -24,6 +25,7 @@ public class MovementManager : MonoBehaviour
     public GolaGolaBody body;
     public GolaGolaParts[] parts;
     public GameObject ThatBox;
+    public GameObject FatAppie;
 
     private MovementType currentType;
     private Vector3 seizureOffset;
@@ -81,25 +83,20 @@ public class MovementManager : MonoBehaviour
             movementCoroutine = null;
         }
 
+        currentType = type;
+
+        bool defaultGolaGola = !(currentType == MovementType.AppieSlide || currentType == MovementType.FatAppie);
+
         pointer.ResetAll();
         body.ResetAll();
+        body.gameObject.SetActive(defaultGolaGola);
         foreach (GolaGolaParts part in parts)
         {
             part.ResetAll();
+            part.gameObject.SetActive(defaultGolaGola);
         }
-
-        if (currentType == MovementType.AppieSlide)
-        {
-            ThatBox.SetActive(false);
-
-            body.gameObject.SetActive(true);
-            foreach (GolaGolaParts part in parts)
-            {
-                part.gameObject.SetActive(true);
-            }
-        }
-
-        currentType = type;
+        ThatBox.SetActive(false);
+        FatAppie.SetActive(false);
 
         switch (currentType)
         {
@@ -115,12 +112,9 @@ public class MovementManager : MonoBehaviour
             case MovementType.AppieSlide:
                 ThatBox.SetActive(true);
                 ThatBox.transform.position = body.originalPos;
-
-                body.gameObject.SetActive(false);
-                foreach (GolaGolaParts part in parts)
-                {
-                    part.gameObject.SetActive(false);
-                }
+                break;
+            case MovementType.FatAppie:
+                FatAppie.SetActive(true);
                 break;
         }
     }
