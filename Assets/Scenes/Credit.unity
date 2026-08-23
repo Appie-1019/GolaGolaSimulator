@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CreditPrinter
   canvas: {fileID: 229417423}
   textSection: {fileID: 5098607126735022198, guid: 0725a4960fb9811418f946be74b6d5af, type: 3}
+  speed: 100
   texts:
   - title: "\uD504\uB85C\uC81D\uD2B8 \uCD1D\uAD04"
     titleSize: 80
@@ -296,7 +297,7 @@ MonoBehaviour:
     titleSize: 80
     detail:
     - 'Appie '
-    - Anbit
+    - <color=#87CEEB>Anbit</color>
     detailSize: 40
   - title: "\uBC30\uACBD \uB514\uC790\uC778"
     titleSize: 80
@@ -328,12 +329,7 @@ MonoBehaviour:
     detail:
     - Appie
     detailSize: 40
-  - title: "\uC0AC\uC6B4\uB4DC \uB514\uC790\uC774\uB108"
-    titleSize: 80
-    detail:
-    - Appie
-    detailSize: 40
-  - title: "BGM \uC81C\uC791"
+  - title: OST <New End Beginning>
     titleSize: 80
     detail:
     - Appie
@@ -408,11 +404,11 @@ MonoBehaviour:
     detail:
     - Appie
     detailSize: 40
-  - title: Player Of The Golagola simulater
+  - title: Player Of The Golagola Simulator
     titleSize: 80
     detail:
     - Appie
-    - "\uB108\uB2D8"
+    - "<color=#FF8000FF>\uB108\uB2D8</color>"
     detailSize: 40
   - title: "1+1 \uC99D\uBA85"
     titleSize: 80
@@ -423,7 +419,7 @@ MonoBehaviour:
     titleSize: 80
     detail:
     - Appie
-    - "\uB108"
+    - "<color=#FF8000FF>\uB108</color>"
     detailSize: 40
   - title: "\uB611\uB611\uD568 \uB2F4\uB2F9"
     titleSize: 80
@@ -502,7 +498,7 @@ MonoBehaviour:
     detail:
     - Appie
     detailSize: 40
-  - title: "\uC57C"
+  - title: "<color=Red>\uC57C</color>"
     titleSize: 150
     detail:
     - "\uC624\uB298 \uC591\uCE58\uD588\uB2C8?"
@@ -545,16 +541,16 @@ MonoBehaviour:
   - title: "\uD06C\uB808\uB527\uC744 \uB05D\uAE4C\uC9C0 \uBD10\uC8FC\uC154\uC11C
       \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
     titleSize: 80
-    detail:
-    - Appie
+    detail: []
     detailSize: 40
   - title: Special thanks
     titleSize: 80
     detail:
     - Appie
-    - "\uB108\uB2D8"
+    - "<color=#FF8000FF>\uADF8\uB9AC\uACE0 \uB2F9\uC5F0\uD788, \uB2F9\uC2E0\uC774\uC8E0!</color>"
     detailSize: 40
-  nextScene: Intro
+  bgm: {fileID: 8300000, guid: 123a1653fb8cc9e40b9e28be4ef9bc3f, type: 3}
+  nextScene: Main
 --- !u!1 &447139588
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,8 +754,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 506803509
-  m_fontColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.11764706}
+    rgba: 2150970677
+  m_fontColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.5019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -776,8 +772,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

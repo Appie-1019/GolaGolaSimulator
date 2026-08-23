@@ -21,6 +21,8 @@ public class PointerPos : MonoBehaviour
 
     public void UpdatePosition()
     {
+        if (MenuPanelToggle.isPanelOpen) return;
+
         if (DataManager.isMobile) MobileControl();
         else MouseControl();
     }

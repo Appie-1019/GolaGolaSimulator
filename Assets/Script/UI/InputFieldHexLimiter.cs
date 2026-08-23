@@ -21,8 +21,7 @@ public class InputFieldHexLimiter : MonoBehaviour
     public void CheckValue(string text = "")
     {
         if (string.IsNullOrEmpty(text)) text = inputField.text;
-
-        text.ToUpperInvariant();
+        text = text.ToUpperInvariant();
         if (!text.StartsWith("#")) text = "#" + text;
         if (ColorUtility.TryParseHtmlString(text, out Color newColor))
         {

@@ -48,9 +48,9 @@ public class AudioManager : MonoBehaviour
             audioPool.Enqueue(newInstance);
         }
 
-        SetVolume(DataManager.saveData.MasterVolume / 100, SoundType.Master);
-        SetVolume(DataManager.saveData.GameVolume / 100, SoundType.Game);
-        SetVolume(DataManager.saveData.UIVolume / 100, SoundType.UI);
+        SetVolume(DataManager.saveData.UI.MasterVolume / 100, SoundType.Master);
+        SetVolume(DataManager.saveData.UI.GameVolume / 100, SoundType.Game);
+        SetVolume(DataManager.saveData.UI.UIVolume / 100, SoundType.UI);
     }
 
     public void SetVolume(float volume0to1, SoundType soundType = SoundType.Master)
@@ -179,6 +179,59 @@ public class AudioManager : MonoBehaviour
 
         audioPool.Enqueue(instance);
         instance.gameObject.SetActive(false);
+    }
+
+    public void SetPitch(string tag, float targetPitch, float duration = 0.0f)
+    {
+        for (int i = activeAudio.Count - 1; i >= 0; i--)
+        {
+            if (activeAudio[i] == null)
+            {
+                activeAudio.RemoveAt(i);
+                continue;
+            }
+
+            if (activeAudio[i].IsTagExists(tag))
+            {
+                activeAudio[i].SetPitch(targetPitch, duration);
+            }
+        }
+    }
+
+    public AudioInstance GetAudioInstances(params string[] tags)
+    {
+        if (tags == null || tags.Length == 0) return null;
+
+        for (int i = 0; i < activeAudio.Count; i++)
+        {
+            if (activeAudio[i] == null) continue;
+
+            if (activeAudio[i].IsTagExists(tags))
+            {
+                return activeAudio[i];
+            }
+        }
+
+        return null;
+    }
+
+    public AudioInstance[] GetAllAudioInstances(params string[] tags)
+    {
+        if (tags == null || tags.Length == 0) return new AudioInstance[0];
+
+        List<AudioInstance> result = new List<AudioInstance>();
+
+        for (int i = 0; i < activeAudio.Count; i++)
+        {
+            if (activeAudio[i] == null) continue;
+
+            if (activeAudio[i].IsTagExists(tags))
+            {
+                result.Add(activeAudio[i]);
+            }
+        }
+
+        return result.ToArray();
     }
 
     private void OnDestroy()

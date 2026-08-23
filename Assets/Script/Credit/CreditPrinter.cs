@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +20,10 @@ public class CreditPrinter : MonoBehaviour
     public Canvas canvas;
     public CreditText textSection;
     [Header("Text")]
+    public float speed = 100f;
     [SerializeField] private CreditTextGroup[] texts;
+    [Header("BGM")]
+    public AudioClip bgm;
     [Header("NextScene")]
     public string nextScene;
 
@@ -30,12 +32,18 @@ public class CreditPrinter : MonoBehaviour
     private float currentDeltaTimeFactor = 1f;
     private float acceleration = 50f;
     bool stoped = false;
+    Vector3[] corners = new Vector3[4];
+    AudioInstance bgmInstance;
 
     void Start()
     {
         stoped = false;
         allText = new List<CreditText>();
         StartCoroutine(PrintCredit());
+        bgmInstance = AudioManager.Instance?.Play2DSound(bgm, SoundType.Game)
+            .SetVolume(0)
+            .SetVolume(1f, 7.5f)
+            .AddTag("Credit", "BGM");
     }
 
     private void Update()
@@ -45,12 +53,28 @@ public class CreditPrinter : MonoBehaviour
 
         if (Pointer.current.press.isPressed)
         {
-            TimeManager.CustomDeltaTimeFactor = currentDeltaTimeFactor;
             currentDeltaTimeFactor += acceleration * Time.deltaTime;
+            TimeManager.CustomDeltaTimeFactor = currentDeltaTimeFactor;
+            bgmInstance.SetPitch(Mathf.Clamp(currentDeltaTimeFactor, 1f, 3f)).SetVolume(0.25f);
         }
         else if (Pointer.current.press.wasReleasedThisFrame)
         {
             TimeManager.CustomDeltaTimeFactor = currentDeltaTimeFactor = 1;
+            bgmInstance.SetPitch(1).SetVolume(1f);
+        }
+    }
+
+    private void LateUpdate()
+    {
+        for (int i = allText.Count - 1; i >= 0; i--)
+        {
+            allText[i].rect.anchoredPosition += Vector2.up * speed * TimeManager.CustomDeltaTime;
+
+            if (IsOutOfScreenTop(allText[i].rect))
+            {
+                Destroy(allText[i].gameObject);
+                allText.RemoveAt(i);
+            }
         }
     }
 
@@ -58,7 +82,7 @@ public class CreditPrinter : MonoBehaviour
     {
         AddText("GolaGolaSimulator", Color.gold, 100f);
         yield return WaitForCustomTime(1);
-        AddText("V1.5", Color.gold, 80f);
+        AddText(DataManager.saveData.VersionName, Color.gold, 80f);
         yield return WaitForCustomTime(3);
 
         for (int i = 0; i < texts.Length; i++)
@@ -70,7 +94,8 @@ public class CreditPrinter : MonoBehaviour
         yield return new WaitUntil(() => allText.Count == 0);
         stoped = true;
         TimeManager.CustomDeltaTimeFactor = 1;
-
+        bgmInstance.StopSound(1.25f);
+        bgmInstance.SetPitch(1f);
         yield return new WaitForSeconds(1.5f);
 
         if (GameManager.IsSceneInBuildSettings(nextScene))
@@ -118,6 +143,24 @@ public class CreditPrinter : MonoBehaviour
         newText.SetText(text);
         newText.SetFontSize(size);
         newText.SetColor(color);
-        newText.canvas = canvas;
+        newText.rect.anchoredPosition = new Vector2(newText.rect.anchoredPosition.x, 0f);
+        allText.Add(newText);
+    }
+
+    private bool IsOutOfScreenTop(RectTransform rect)
+    {
+        rect.GetWorldCorners(corners);
+        Camera uiCamera = null;
+
+        if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+        {
+            uiCamera = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+        }
+
+        float bottomScreenY = uiCamera != null
+            ? uiCamera.WorldToScreenPoint(corners[0]).y
+            : corners[0].y;
+
+        return bottomScreenY > Screen.height;
     }
 }

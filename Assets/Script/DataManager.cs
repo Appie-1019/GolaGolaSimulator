@@ -1,13 +1,5 @@
 using UnityEngine;
 
-public class SaveData
-{
-    public float MasterVolume;
-    public float GameVolume;
-    public float UIVolume;
-
-    public bool ToastMessegeAllow;
-}
 
 public class DataManager : MonoBehaviour
 {
@@ -62,10 +54,10 @@ public class DataManager : MonoBehaviour
 
     public static void Save()
     {
-        SaveData(saveData);
+        Save(saveData);
     }
 
-    public static void SaveData(SaveData dataToSave)
+    public static void Save(SaveData dataToSave)
     {
         string jsonString = JsonUtility.ToJson(dataToSave);
         PlayerPrefs.SetString(SAVE_KEY, jsonString);
@@ -78,15 +70,9 @@ public class DataManager : MonoBehaviour
         {
             string jsonString = PlayerPrefs.GetString(SAVE_KEY);
             SaveData loadedData = JsonUtility.FromJson<SaveData>(jsonString);
-            return loadedData;
+            if (loadedData.VersionName == SaveData.Version) return loadedData;
         }
 
-        return new SaveData
-        {
-            MasterVolume = 100.0f,
-            GameVolume = 100.0f,
-            UIVolume = 100.0f,
-            ToastMessegeAllow = true
-        };
+        return SaveData.Default;
     }
 }

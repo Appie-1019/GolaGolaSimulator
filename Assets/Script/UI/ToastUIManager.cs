@@ -33,7 +33,7 @@ public class ToastUIManager : MonoBehaviour
     [Header("DATA")]
     public ToastUIData data;
     [Header("UI Object")]
-    public ToastUI toastMessege;
+    public ToastUI toastMessage;
     public Transform canvas;
 
     private List<ToastUI> toastUIs = new List<ToastUI>();
@@ -75,24 +75,24 @@ public class ToastUIManager : MonoBehaviour
         }
     }
 
-    /// <summary> <paramref name="messege"/>를 글자로 하는 토스트 메시지 출력 </summary>
-    /// <param name="messege">토스트 메시지의 글자</param>
-    public void AddToast(string messege)
+    /// <summary> <paramref name="message"/>를 글자로 하는 토스트 메시지 출력 </summary>
+    /// <param name="message">토스트 메시지의 글자</param>
+    public void AddToast(string message)
     {
-        AddToast(messege, DefaultTextColor);
+        AddToast(message, DefaultTextColor);
     }
 
-    public void AddToast(string messege, Color textColor)
+    public void AddToast(string message, Color textColor)
     {
-        if (!DataManager.saveData.ToastMessegeAllow) return;
-        if (string.IsNullOrWhiteSpace(messege)) return;
+        if (!DataManager.saveData.UI.ToastMessageAllow) return;
+        if (string.IsNullOrWhiteSpace(message)) return;
 
         StackAllToast();
-        ToastUI newMessegeUI = Instantiate(toastMessege, canvas);
-        newMessegeUI.SetData(data);
-        newMessegeUI.SetTextColor(textColor);
-        newMessegeUI.Show(messege);
-        toastUIs.Add(newMessegeUI);
+        ToastUI newMessageUI = Instantiate(toastMessage, canvas);
+        newMessageUI.SetData(data);
+        newMessageUI.SetTextColor(textColor);
+        newMessageUI.Show(message);
+        toastUIs.Add(newMessageUI);
     }
 
     /// <summary> 모든 존재하는 <see cref="ToastUI"/> 의 쌓음 처리 (<see cref="StackAllToast"/>) 호출 </summary>

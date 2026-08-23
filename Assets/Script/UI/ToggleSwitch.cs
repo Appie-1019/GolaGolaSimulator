@@ -107,18 +107,6 @@ public class ToggleSwitch : MonoBehaviour
         Color targetColor = enable ? enableColor : disableColor;
         Vector2 targetPos = enable ? dotPos : -dotPos;
 
-        if (!instant)
-        {
-            if (isEnable)
-            {
-                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI);
-            }
-            else
-            {
-                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI, 1, 0.5f);
-            }
-        }
-
         if (instant)
         {
             dot.anchoredPosition = targetPos;
@@ -128,6 +116,15 @@ public class ToggleSwitch : MonoBehaviour
         {
             dot.DOAnchorPos(targetPos, moveDuration);
             backgroundImage.DOColor(targetColor, moveDuration);
+
+            if (isEnable)
+            {
+                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI);
+            }
+            else
+            {
+                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI, 1, 0.5f);
+            }
         }
 
         if (hasCallback) toggleListener?.Invoke(isEnable);

@@ -4,32 +4,32 @@ using UnityEngine;
 public class InterfaceSetting : MonoBehaviour
 {
     public ToggleSwitch toastToggleSwitch;
-    public string[] toastEnableMesseges;
-    public string[] toastDisableMesseges;
+    public string[] toastEnableMessages;
+    public string[] toastDisableMessages;
 
     void Start()
     {
-        toastToggleSwitch.InitEnable(DataManager.saveData.ToastMessegeAllow, true);
+        toastToggleSwitch.InitEnable(DataManager.saveData.UI.ToastMessageAllow, true);
         StartCoroutine(StartAct());
     }
 
     IEnumerator StartAct()
     {
         yield return null;
-        toastToggleSwitch.AddToggleListener(ToastMessegeEnable);
+        toastToggleSwitch.AddToggleListener(ToastMessageEnable);
     }
 
-    void ToastMessegeEnable(bool enable)
+    void ToastMessageEnable(bool enable)
     {
         if (enable)
         {
-            DataManager.saveData.ToastMessegeAllow = enable;
-            ToastUIManager.Instance?.AddToast(GetRandomMessage(toastEnableMesseges), Color.yellow);
+            DataManager.saveData.UI.ToastMessageAllow = enable;
+            ToastUIManager.Instance?.AddToast(GetRandomMessage(toastEnableMessages), Color.yellow);
         }
         else
         {
-            ToastUIManager.Instance.AddToast(GetRandomMessage(toastDisableMesseges), Color.yellow);
-            DataManager.saveData.ToastMessegeAllow = enable;
+            ToastUIManager.Instance.AddToast(GetRandomMessage(toastDisableMessages), Color.yellow);
+            DataManager.saveData.UI.ToastMessageAllow = enable;
         }
 
         DataManager.Save();

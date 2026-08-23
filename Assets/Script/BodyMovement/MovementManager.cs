@@ -29,7 +29,7 @@ public class MovementManager : MonoBehaviour
     public GameObject FatAppie;
     public GameObject afterImage;
 
-    private MovementType currentType;
+    [HideInInspector] public MovementType currentType;
     private Vector3 seizureOffset;
     private Coroutine movementCoroutine;
 
