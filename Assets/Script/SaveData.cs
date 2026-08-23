@@ -1,13 +1,14 @@
+using System.Collections.Generic;
+
 [System.Serializable]
 public class SaveData
 {
-    public string VersionName;
     public MainUISaveData UI;
+    public BackdoorSaveData Backdoor;
+    public SaveVersion Version;
 
-    public static readonly string Version = "1.5.1";
     public static SaveData Default => new SaveData
     {
-        VersionName = Version,
         UI = new MainUISaveData
         {
             MasterVolume = 100.0f,
@@ -16,6 +17,17 @@ public class SaveData
             ToastMessageAllow = true,
             GolaSoundAllow = true,
             GolaSoundPitchAllow = false,
+        },
+
+        Backdoor = new BackdoorSaveData
+        {
+            backdoorDialogIndex = 0
+        },
+
+        Version = new SaveVersion
+        {
+            Current = "1.5.2",
+            All = new HashSet<string>()
         }
     };
 }
@@ -30,4 +42,18 @@ public struct MainUISaveData
     public bool ToastMessageAllow;
     public bool GolaSoundAllow;
     public bool GolaSoundPitchAllow;
+}
+
+[System.Serializable]
+public struct BackdoorSaveData
+{
+    public int backdoorDialogIndex;
+}
+
+[System.Serializable]
+public struct SaveVersion
+{
+    public string Current;
+
+    public HashSet<string> All;
 }

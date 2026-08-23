@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public struct QueuedAudio
 public class AudioInstance : MonoBehaviour
 {
     [HideInInspector] public bool IsPaused { get; private set; } = false;
+    [HideInInspector] public float Progress { get; private set; }
 
     private HashSet<string> tags;
     private Queue<QueuedAudio> audioQueue;
@@ -23,6 +25,7 @@ public class AudioInstance : MonoBehaviour
     private Coroutine checkPlayingCoroutine;
     private AudioSource AS;
     private AudioSource nextAS;
+    private Action onAudioFinished;
 
     private void Awake()
     {
@@ -33,6 +36,18 @@ public class AudioInstance : MonoBehaviour
         nextAS.playOnAwake = false;
     }
 
+    private void Update()
+    {
+        if (AS != null && AS.clip != null && AS.clip.samples > 0)
+        {
+            Progress = Mathf.Clamp01((float)AS.timeSamples / AS.clip.samples);
+        }
+        else
+        {
+            Progress = 0f;
+        }
+    }
+
     public void Init(AudioClip clip, float asVolume, float pitch, bool is3D, AudioMixerGroup mixerGroup, bool isLoop)
     {
         isStopping = false;
@@ -40,6 +55,9 @@ public class AudioInstance : MonoBehaviour
         if (tags != null) tags.Clear();
         if (audioQueue != null) audioQueue.Clear();
         nextAS.Stop();
+
+        Progress = 0f;
+        onAudioFinished = null;
 
         AS.clip = clip;
         SetVolume(asVolume);
@@ -130,6 +148,8 @@ public class AudioInstance : MonoBehaviour
 
         if (!isStopping)
         {
+            onAudioFinished?.Invoke();
+
             if (hasScheduledNext)
             {
                 SwapAudioSources();
@@ -372,5 +392,17 @@ public class AudioInstance : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public AudioInstance AddOnFinishedCallback(Action callback)
+    {
+        onAudioFinished += callback;
+        return this;
+    }
+
+    public AudioInstance RemoveOnFinishedCallback(Action callback)
+    {
+        onAudioFinished -= callback;
+        return this;
     }
 }

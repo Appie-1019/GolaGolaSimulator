@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.5.2
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.5.2 (2026/8.18)
+  developerComment: That Door
+  additional:
+  - item: "\uADF8 \uBB38\uC774 \uC0DD\uAE41\uB2C8\uB2E4."
+    subItems:
+    - item: "\uC544\uC9C1 \uAE30\uB2A5\uC740 \uC5C6\uC9C0\uB9CC, \uAE30\uB2A5\uC740
+        \uC5C6\uC2B5\uB2C8\uB2E4."
+      subItems: []
+  - item: "\uB85C\uB529 \uD654\uBA74\uC5D0 \uAC15\uB825 \uC0C8\uB85C\uACE0\uCE68\uC5D0
+      \uB300\uD55C \uC548\uB0B4\uAC00 \uCD94\uAC00\uB429\uB2C8\uB2E4."
+    subItems: []
+  changes:
+  - item: "\uC2DC\uC791 \uC2DC \uACBD\uACE0 \uCD9C\uB825\uC758 \uB0B4\uC6A9\uC774
+      \uBC14\uB00C\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uC2DC\uC791 \uC2DC \uACBD\uACE0 \uCD9C\uB825\uC774 \uB180\uB77C\uC6B8
+      \uC815\uB3C4\uB85C \uBE60\uB974\uAC8C \uC9C0\uB098\uAC11\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uD3F0\uD2B8 \uBAA8\uC11C\uB9AC\uB97C \uBD80\uB4DC\uB7FD\uC9C0 \uC54A\uAC8C
+      \uBCC0\uACBD\uD558\uC600\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uD06C\uB808\uB527 \uB0B4\uC6A9 \uC77C\uBD80\uB294 \uC81C\uAC70\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  etc: []

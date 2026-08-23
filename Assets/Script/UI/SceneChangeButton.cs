@@ -30,11 +30,7 @@ public class SceneChangeButton : MonoBehaviour
 
     private void OnButtonClicked()
     {
-        if (GameManager.IsSceneInBuildSettings(targetSceneName))
-        {
-            SceneManager.LoadScene(targetSceneName);
-        }
-        else
+        if (!GameManager.TryLoadScene(targetSceneName))
         {
             Debug.LogWarning("이동할 씬 이름이 올바르지 않음");
         }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -70,7 +71,14 @@ public class DataManager : MonoBehaviour
         {
             string jsonString = PlayerPrefs.GetString(SAVE_KEY);
             SaveData loadedData = JsonUtility.FromJson<SaveData>(jsonString);
-            if (loadedData.VersionName == SaveData.Version) return loadedData;
+
+            if (loadedData.Version.All == null) loadedData.Version.All = new HashSet<string>();
+            if (loadedData.Version.All.Add(loadedData.Version.Current))
+            {
+                Save(loadedData);
+            }
+
+            return loadedData;
         }
 
         return SaveData.Default;

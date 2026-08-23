@@ -52,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CreditText
   rect: {fileID: 2973755589818396172}
   text: {fileID: 7756148121414470085}
-  speed: 100
 --- !u!222 &12908329358202697
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -83,8 +82,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GolaGolaSimulator
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6ac98e85c0469c34bbeda1ff6a74163b, type: 2}
-  m_sharedMaterial: {fileID: 5249345862805526972, guid: 6ac98e85c0469c34bbeda1ff6a74163b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_sharedMaterial: {fileID: -344626005601700747, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

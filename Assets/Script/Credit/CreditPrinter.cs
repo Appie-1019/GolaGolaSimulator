@@ -82,7 +82,7 @@ public class CreditPrinter : MonoBehaviour
     {
         AddText("GolaGolaSimulator", Color.gold, 100f);
         yield return WaitForCustomTime(1);
-        AddText(DataManager.saveData.VersionName, Color.gold, 80f);
+        AddText(DataManager.saveData.Version.Current, Color.gold, 80f);
         yield return WaitForCustomTime(3);
 
         for (int i = 0; i < texts.Length; i++)

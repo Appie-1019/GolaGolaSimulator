@@ -96,7 +96,9 @@ public class ToastUI : MonoBehaviour
     /// <summary> 토스트 메시지의 쌓임 정도 추가 </summary>
     public void Stack()
     {
-        if (isDestroying) return;
+        if (this == null || cg == null || rect == null || message == null || isDestroying)
+            return;
+
         currentAccumulationCount++;
         if (currentAccumulationCount >= data.MaxAccumulation)
         {

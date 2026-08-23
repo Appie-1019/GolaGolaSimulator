@@ -34,4 +34,20 @@ public class GameManager : MonoBehaviour
 
         return false;
     }
+
+    public static void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public static bool TryLoadScene(string sceneName)
+    {
+        if (IsSceneInBuildSettings(sceneName))
+        {
+            LoadScene(sceneName);
+            return true;
+        }
+
+        return false;
+    }
 }
