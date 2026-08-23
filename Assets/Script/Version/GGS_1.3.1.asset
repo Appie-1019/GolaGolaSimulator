@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.3.1
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.3.1 (2026/7.8)
+  developerComment: "\uC65C\uC548\uB418\uB11D?;;"
+  additional:
+  - item: "\uC5C5\uB370\uC774\uD2B8 V1.2 \uC5D0\uC11C \uCD94\uAC00\uB41C \uC774\uC2A4\uD130
+      \uC5D0\uADF8\uB294 \uD65C\uC131\uD654\uC640 \uBE44\uC2B7\uD55C \uBC29\uBC95\uC73C\uB85C
+      \uBE44\uD65C\uC131\uD654\uB420 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  changes:
+  - item: "\uC5C5\uB370\uC774\uD2B8 V1.3 \uC5D0\uC11C \uBAA8\uBC14\uC77C \uAC10\uC9C0\uAC00
+      \uB418\uC9C0 \uC54A\uB358 \uBB38\uC81C\uB97C \uD574\uACB0\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uC778\uD48B \uD544\uB4DC\uAC00 \uAC12\uC744 \uC81C\uB300\uB85C \uC804\uB2EC\uD558\uC9C0
+      \uC54A\uB294 \uBB38\uC81C\uAC00 \uD574\uACB0\uB41C \uAC83\uC774 \uAC1C\uBC1C\uC790\uC758
+      \uAE30\uBD84 \uD0D3\uC774\uC600\uB358 \uBB38\uC81C\uAC00 \uD574\uACB0\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems:
+    - item: "\uC774\uB97C \uC704\uD55C \uC644\uC804\uD788 \uC0C8\uB85C\uC6B4 \uB370\uC774\uD130
+        \uAD6C\uC870\uAC00 \uC81C\uC791\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+      subItems: []
+  etc: []

@@ -28,7 +28,7 @@ public class InputFieldHexLimiter : MonoBehaviour
         {
             inputField.SetTextWithoutNotify(text);
             currentColor = newColor;
-            BackgroundManager.Instance?.UpdateBackgroundUI(BackgroundSetterType.HexInput);
+            BackgroundSetting.Instance?.UpdateBackgroundUI(BackgroundSetterType.HexInput);
         }
         else
         {

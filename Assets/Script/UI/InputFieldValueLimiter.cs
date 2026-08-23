@@ -31,7 +31,7 @@ public class InputFieldValueLimiter : MonoBehaviour
         {
             value = Mathf.Clamp(value, slider.MinValue, slider.MaxValue);
             SetFloatToText(value);
-            BackgroundManager.Instance?.UpdateBackgroundUI(BackgroundSetterType.FloatInputField);
+            BackgroundSetting.Instance?.UpdateBackgroundUI(BackgroundSetterType.FloatInputField);
         }
     }
 

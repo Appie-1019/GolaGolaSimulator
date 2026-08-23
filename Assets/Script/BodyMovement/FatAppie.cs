@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class FatAppie : MonoBehaviour
 {
     public float lunchPower;
+    public AudioClip collisionSound;
 
     private Rigidbody2D rb;
 
@@ -26,6 +27,8 @@ public class FatAppie : MonoBehaviour
 
     void Update()
     {
+        rb.simulated = !MenuPanelToggle.isPanelOpen;
+
         if (TryGetClickPosition(out Vector3 targetPos))
         {
             Vector3 dir = (targetPos - transform.position).normalized;
@@ -60,5 +63,12 @@ public class FatAppie : MonoBehaviour
 
         mouseWorldPos.z = 0f;
         return mouseWorldPos;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (AudioManager.Instance == null) return;
+
+        AudioManager.Instance.Play3DSound(collisionSound, transform.position, SoundType.Game, 0.5f);
     }
 }

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class MenuPanelToggle : MonoBehaviour
@@ -27,12 +28,10 @@ public class MenuPanelToggle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ToggleMenuPanel();
-        }
-
-        if (DataManager.isMobile && CanToggleMenuPanelOnMoblie())
+        if (
+            (Keyboard.current != null && Keyboard.current.tabKey.wasPressedThisFrame) ||
+            (DataManager.isMobile && CanToggleMenuPanelOnMoblie())
+            )
         {
             ToggleMenuPanel();
         }
@@ -47,8 +46,8 @@ public class MenuPanelToggle : MonoBehaviour
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
 
-            if (touchZero.phase != TouchPhase.Ended && touchZero.phase != TouchPhase.Canceled &&
-                touchOne.phase != TouchPhase.Ended && touchOne.phase != TouchPhase.Canceled)
+            if (touchZero.phase != UnityEngine.TouchPhase.Ended && touchZero.phase != UnityEngine.TouchPhase.Canceled &&
+                touchOne.phase != UnityEngine.TouchPhase.Ended && touchOne.phase != UnityEngine.TouchPhase.Canceled)
             {
                 touchHoldTimer += Time.deltaTime;
 

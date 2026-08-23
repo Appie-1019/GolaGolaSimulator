@@ -7,11 +7,11 @@ public enum BackgroundSetterType
     None, Slider, FloatInputField, HexInput
 }
 
-public class BackgroundManager : MonoBehaviour
+public class BackgroundSetting : MonoBehaviour
 {
-    public static BackgroundManager Instance { get; private set; }
+    public static BackgroundSetting Instance { get; private set; }
 
-    [Header("Setter")]
+    [Header("Slider")]
     public Slider[] sliders;
     public InputFieldValueLimiter[] inputFieldsFloat;
     public InputFieldHexLimiter inputFieldsHex;
@@ -114,13 +114,13 @@ public class BackgroundManager : MonoBehaviour
     IEnumerator RainbowBackGround()
     {
         float hue = 0f;
-
+        Color nextColor;
         while (true)
         {
             hue += Time.deltaTime;
             if (hue > 1f) hue -= 1f;
 
-            Color nextColor = Color.HSVToRGB(hue, 1f, 1f);
+            nextColor = Color.HSVToRGB(hue, 1f, 1f);
             SetColor(nextColor);
 
             yield return null;

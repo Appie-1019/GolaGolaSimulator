@@ -24,15 +24,6 @@ public class SetTextFromToggleSwitch : MonoBehaviour
             Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
             return;
         }
-    }
-
-    private void Start()
-    {
-        if (tmp == null)
-        {
-            Debug.LogError(gameObject.name + " 은(는) 필요한 컴포넌트가 없음");
-            return;
-        }
 
         toggleSwitch.AddToggleListener(OnToggleChanged);
         OnToggleChanged(toggleSwitch.isEnable);

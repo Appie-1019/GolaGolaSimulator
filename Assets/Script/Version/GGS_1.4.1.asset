@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.4.1
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.4.1 (2026/7.24)
+  developerComment: "\uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8!
+    \uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8!
+    \uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8! \uB6B1\uB6B1\uB0A8!"
+  additional:
+  - item: "'\uB6B1\uB6B1\uB0A8' \uC870\uC791 \uBC29\uC2DD\uC774 \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  changes: []
+  etc:
+  - item: "Anbit, \uC5D0\uC14B \uC81C\uACF5 \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+    subItems: []

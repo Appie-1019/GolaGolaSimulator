@@ -11,8 +11,11 @@ public class ToggleSwitch : MonoBehaviour
     public RectTransform dot;
     public Image backgroundImage;
     public float moveDuration = 0.15f;
+    [Header("Sound")]
+    public AudioClip clickSound;
     [Header("Start")]
-    public bool EnableAsStart = true;
+    public bool initAsStart = true;
+    public bool enableAsStart = true;
 
     [HideInInspector] public bool isEnable;
 
@@ -51,13 +54,19 @@ public class ToggleSwitch : MonoBehaviour
             this.enabled = false;
             return;
         }
+    }
 
-        InitEnable(EnableAsStart);
+    private void Start()
+    {
+        if (initAsStart)
+        {
+            InitEnable(enableAsStart);
+        }
     }
 
     /// <summary> 초기 <paramref name="enable"/> 상태 설정 및 UI 즉시 갱신 </summary>
     /// <param name="enable">활성화 여부</param>
-    private void InitEnable(bool enable)
+    public void InitEnable(bool enable, bool doCallBack = false)
     {
         isEnable = enable;
         if (backgroundImage == null || dot == null) return;
@@ -67,6 +76,8 @@ public class ToggleSwitch : MonoBehaviour
 
         backgroundImage.color = enable ? enableColor : disableColor;
         dot.anchoredPosition = enable ? dotPos : -dotPos;
+
+        if (doCallBack) toggleListener?.Invoke(isEnable);
     }
 
     /// <summary> <see cref="isEnable"/> 상태를 반전시켜 <see cref="SetEnable(bool, bool)"/> 호출 </summary>
@@ -95,6 +106,18 @@ public class ToggleSwitch : MonoBehaviour
         backgroundImage.DOKill();
         Color targetColor = enable ? enableColor : disableColor;
         Vector2 targetPos = enable ? dotPos : -dotPos;
+
+        if (!instant)
+        {
+            if (isEnable)
+            {
+                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI);
+            }
+            else
+            {
+                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI, 1, 0.5f);
+            }
+        }
 
         if (instant)
         {

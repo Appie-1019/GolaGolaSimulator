@@ -132,6 +132,7 @@ MonoBehaviour:
   dot: {fileID: 2076230260355462997}
   backgroundImage: {fileID: 3786934101098853028}
   moveDuration: 0.15
+  clickSound: {fileID: 8300000, guid: edd57065c09a998419ee23d92215242a, type: 3}
   EnableAsStart: 1
   isEnable: 0
 --- !u!222 &7830086734841949570

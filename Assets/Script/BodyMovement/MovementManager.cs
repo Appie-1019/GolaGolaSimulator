@@ -13,7 +13,8 @@ public enum MovementType
     Statue = 7,
     Tracking = 8,
     NicePC = 9,
-    FatAppie = 10
+    FatAppie = 10,
+    AfterImage = 11
 }
 
 public class MovementManager : MonoBehaviour
@@ -26,6 +27,7 @@ public class MovementManager : MonoBehaviour
     public GolaGolaParts[] parts;
     public GameObject ThatBox;
     public GameObject FatAppie;
+    public GameObject afterImage;
 
     private MovementType currentType;
     private Vector3 seizureOffset;
@@ -70,7 +72,7 @@ public class MovementManager : MonoBehaviour
             case MovementType.Seizure: Move_Seizure(); break;
             case MovementType.Statue: Move_Statue(); break;
             case MovementType.Tracking: Move_Tracking(); break;
-            case MovementType.NicePC: Move_NicePC(); break;
+            case MovementType.AfterImage: Move_AfterImage(); break;
             default: break;
         }
     }
@@ -252,5 +254,18 @@ public class MovementManager : MonoBehaviour
 
             yield return new WaitForSeconds(Random.value / 2);
         }
+    }
+
+    void Move_AfterImage()
+    {
+        pointer.UpdatePosition();
+        body.GotoPointer();
+
+        foreach (GolaGolaParts part in parts)
+        {
+            part.LookAtBody();
+        }
+
+        Instantiate(afterImage, body.transform.position, Quaternion.identity);
     }
 }

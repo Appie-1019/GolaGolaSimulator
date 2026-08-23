@@ -13,12 +13,18 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] private float minValue = 0f;
     [SerializeField] private float maxValue = 1f;
     [SerializeField] private bool isInteger = false;
+    [Header("Sound")]
+    [SerializeField] private bool soundEnable = true;
+    [SerializeField] private float soundStep = 0.05f;
+    [SerializeField] private AudioClip sound;
 
     [Range(0f, 1f)]
     [SerializeField] private float rawPercent = 0.5f;
 
     private System.Action<float> onValueChanged;
     private bool isDragInterrupted = false;
+    private float lastSoundRawPercent;
+    private AudioInstance currentAudio;
 
     /// <summary>
     /// 슬라이더의 현재 값.
@@ -91,6 +97,16 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
             float adjustedX = localPoint.x + (width * bgRect.pivot.x);
 
             rawPercent = Mathf.Clamp01(adjustedX / width);
+            if (soundEnable)
+            {
+                float currentSoundStep = RoundToNearestMultiple(rawPercent, soundStep);
+                if (lastSoundRawPercent != currentSoundStep)
+                {
+                    if(currentAudio != null && currentAudio.gameObject.activeInHierarchy) currentAudio.StopSound();
+                    currentAudio = AudioManager.Instance?.Play2DSound(sound, SoundType.UI);
+                    lastSoundRawPercent = currentSoundStep;
+                }
+            }
 
             UpdateSliderUI();
             onValueChanged?.Invoke(Value);
@@ -133,4 +149,11 @@ public class Slider : MonoBehaviour, IPointerDownHandler, IDragHandler
     /// <summary> 값 변경 이벤트에서 <paramref name="listener"/> 제거 </summary>
     /// <param name="listener">제거할 콜백 함수</param>
     public void RemoveListener(System.Action<float> listener) => onValueChanged -= listener;
+
+    public static float RoundToNearestMultiple(float value, float step)
+    {
+        if (step <= 0f) return Mathf.Clamp01(value);
+        float rounded = Mathf.Round(value / step) * step;
+        return Mathf.Clamp01(rounded);
+    }
 }

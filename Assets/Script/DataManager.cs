@@ -1,22 +1,22 @@
 using UnityEngine;
-using UnityEngine.UI;
+
+public class SaveData
+{
+    public float MasterVolume;
+    public float GameVolume;
+    public float UIVolume;
+
+    public bool ToastMessegeAllow;
+}
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance { get; private set; }
+    public static SaveData saveData;
 
-    public static bool CanToast { get; private set; }
     public static bool isMobile { get; private set; }
 
-    [Header("Mobile UI Raycast Set")]
-    [SerializeField] private Image[] mobileRaycastDisabledImages;
-    [Header("Mobile Gameobject Enable/Disable Set")]
-    [SerializeField] private GameObject[] mobileEnabledGameObjects;
-    [SerializeField] private GameObject[] mobileDisabledGameObjects;
-    [Header("Setting")]
-    public ToggleSwitch toastToggleSwitch;
-    //[Header("Debug")]
-    //public bool moblie = true;
+    private const string SAVE_KEY = "GolaSaveData";
 
     private void Awake()
     {
@@ -28,45 +28,8 @@ public class DataManager : MonoBehaviour
         Instance = this;
 
         isMobile = IsMobileDevice();
-        DisableRaycastForMobile();
-        DisableGameobjectForMoblie();
-        EnableGameobjectForMoblie();
-    }
-
-    void Start()
-    {
-        toastToggleSwitch.AddToggleListener((isOn) => { CanToast = isOn; });
-        CanToast = toastToggleSwitch.isEnable;
-    }
-
-    private void DisableRaycastForMobile()
-    {
-        if (mobileRaycastDisabledImages == null || mobileRaycastDisabledImages.Length == 0) return;
-
-        foreach (Image img in mobileRaycastDisabledImages)
-        {
-            if (img != null) img.raycastTarget = !isMobile;
-        }
-    }
-
-    private void DisableGameobjectForMoblie()
-    {
-        if (mobileDisabledGameObjects == null || mobileDisabledGameObjects.Length == 0) return;
-
-        foreach (GameObject gameObject in mobileDisabledGameObjects)
-        {
-            if (gameObject != null) gameObject.SetActive(!isMobile);
-        }
-    }
-
-    private void EnableGameobjectForMoblie()
-    {
-        if (mobileEnabledGameObjects == null || mobileEnabledGameObjects.Length == 0) return;
-
-        foreach (GameObject gameObject in mobileEnabledGameObjects)
-        {
-            if (gameObject != null) gameObject.SetActive(isMobile);
-        }
+        //isMobile = true;
+        saveData = LoadData();
     }
 
     /// <summary> 현재 접속한 기기 종류 판단 </summary>
@@ -95,5 +58,35 @@ public class DataManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public static void Save()
+    {
+        SaveData(saveData);
+    }
+
+    public static void SaveData(SaveData dataToSave)
+    {
+        string jsonString = JsonUtility.ToJson(dataToSave);
+        PlayerPrefs.SetString(SAVE_KEY, jsonString);
+        PlayerPrefs.Save();
+    }
+
+    private SaveData LoadData()
+    {
+        if (PlayerPrefs.HasKey(SAVE_KEY))
+        {
+            string jsonString = PlayerPrefs.GetString(SAVE_KEY);
+            SaveData loadedData = JsonUtility.FromJson<SaveData>(jsonString);
+            return loadedData;
+        }
+
+        return new SaveData
+        {
+            MasterVolume = 100.0f,
+            GameVolume = 100.0f,
+            UIVolume = 100.0f,
+            ToastMessegeAllow = true
+        };
     }
 }

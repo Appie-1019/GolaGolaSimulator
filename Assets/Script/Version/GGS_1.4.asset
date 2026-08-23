@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.4
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.4 (2026/7.12)
+  developerComment: "\uC774\uC81C \uB2E4\uC591\uD55C \uBC29\uBC95\uC73C\uB85C GolaGola\uD574\uBCF4\uC138\uC694."
+  additional:
+  - item: "\uBA54\uB274\uAC00 \uC774\uC81C \uB4DC\uB86D\uB2E4\uC6B4 \uBA54\uB274\uB85C
+      \uAD6C\uC131\uB429\uB2C8\uB2E4. \uD3BC\uCE58\uACE0 \uC811\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uC774\uC81C \uC870\uC791 \uBC29\uC2DD\uC744 \uBCC0\uACBD\uD560 \uC218
+      \uC788\uB294 \uAE30\uB2A5\uC744 \uCD94\uAC00\uD588\uC2B5\uB2C8\uB2E4. \uD604\uC7AC
+      \uC874\uC7AC\uD558\uB294 \uBAA8\uB4E0 \uC870\uC791 \uBC29\uC2DD\uC740 \uB2E4\uC74C\uACFC
+      \uAC19\uC2B5\uB2C8\uB2E4."
+    subItems:
+    - item: "\uAE30\uBCF8"
+      subItems: []
+    - item: "\uAD00\uC131"
+      subItems: []
+    - item: "\uBD80\uB4DC\uB7FD\uAC8C"
+      subItems: []
+    - item: "\uD68C\uC804"
+      subItems: []
+    - item: "\uBC18\uC804"
+      subItems: []
+    - item: "\uC560\uD53C \uC2AC\uB77C\uC774\uB4DC"
+      subItems: []
+    - item: "\uBC1C\uC791"
+      subItems: []
+    - item: "\uB3D9\uC0C1"
+      subItems: []
+    - item: "\uCD94\uC801"
+      subItems: []
+    - item: "\uB098\uC774\uC2A4\uD55C \uCEF4\uD4E8\uD130"
+      subItems: []
+  changes:
+  - item: "CHANGELOG.md \uC758 \uBAA8\uB4E0 \uBC84\uC804 \uAE30\uB85D\uC5D0 [\uCD94\uAC00\uB428],
+      [\uC218\uC815\uB428], [\uAE30\uD0C0] \uB97C \uAD6C\uBD84\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uD1A0\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uC704\uCE58\uAC00 \uC57D\uAC04
+      \uC544\uB798\uC5D0 \uD45C\uC2DC\uB418\uB3C4\uB85D \uC870\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uC774\uC81C \uD29C\uD1A0\uB9AC\uC5BC\uC6A9 \uD1A0\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0\uB294
+      \uC0C9\uC0C1\uC774 \uC788\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uD314\uACFC \uB2E4\uB9AC\uAC00 \uBAB8\uD1B5\uC744 \uBC14\uB77C\uBCF4\uB294
+      \uAC01\uB3C4\uAC00 \uBBFF\uAE30\uC9C0 \uC54A\uC744 \uC815\uB3C4\uB85C \uC544\uC8FC
+      \uC57D\uAC04 \uC870\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uBA54\uB274\uC758 \uC2A4\uD06C\uB864 \uC18D\uB3C4\uB97C \uACFC\uB3C4\uD558\uAC8C
+      \uB290\uB9AC\uC9C0 \uC54A\uB3C4\uB85D \uC870\uC815\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  etc: []

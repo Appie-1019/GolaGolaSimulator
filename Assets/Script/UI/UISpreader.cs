@@ -20,6 +20,8 @@ public class UISpreader : MonoBehaviour
     public float pressedScale = 0.6f;
     public float reductionDuration = 0.15f;
     public float expansionDuration = 0.15f;
+    [Header("Sound")]
+    public AudioClip actSound;
     [Header("Child object")]
     public UISpreader[] ChildSpreaders;
     public RectTransform[] extraReducedObject;
@@ -53,7 +55,7 @@ public class UISpreader : MonoBehaviour
         originalScale = rect.localScale;
         CollectExtraHeights();
 
-        SetState(OpenAtStart, true);
+        SetState(OpenAtStart, true, false);
         lastState = OpenAtStart;
     }
 
@@ -68,7 +70,7 @@ public class UISpreader : MonoBehaviour
         }
     }
 
-    void SetState(bool enable, bool instant = false, float timeReduction = 0)
+    void SetState(bool enable, bool instant = false, bool soundEnable = true, float timeReduction = 0)
     {
         UIRect.DOKill();
         rect.DOKill();
@@ -86,7 +88,7 @@ public class UISpreader : MonoBehaviour
             targetColor = openColor;
             targetSizeDelta = originalSizeDelta;
             RestoreExtraObjectsHeight(instant);
-
+            if (soundEnable) AudioManager.Instance?.Play2DSound(actSound, SoundType.UI);
         }
         else
         {
@@ -95,6 +97,7 @@ public class UISpreader : MonoBehaviour
             targetColor = closeColor;
             targetSizeDelta = closeSizeDelta;
             SetExtraObjectsHeightsToZero(instant, 0.1f);
+            if (soundEnable) AudioManager.Instance?.Play2DSound(actSound, SoundType.UI, 1, 0.5f);
         }
 
         StartCoroutine(ForceChildContorl(enable));
@@ -113,7 +116,24 @@ public class UISpreader : MonoBehaviour
         {
             float currentActDuration = actDurtaion - timeReduction;
             UIRect.DOScale(targetScale, currentActDuration).SetEase(Ease.OutQuad);
-            UIRect.DOSizeDelta(targetSizeDelta, currentActDuration).SetEase(Ease.OutQuad).OnComplete(() => { UIRect.sizeDelta += Vector2.one * 0.002f; });
+            UIRect.DOSizeDelta(targetSizeDelta, currentActDuration)
+                .SetEase(Ease.OutQuad)
+                .OnUpdate(() =>
+                {
+                    if (transform.parent is RectTransform parentRect)
+                    {
+                        LayoutRebuilder.ForceRebuildLayoutImmediate(parentRect);
+                    }
+                })
+                .OnComplete(() =>
+                {
+                    UIRect.sizeDelta += Vector2.one * 0.002f;
+
+                    if (transform.parent is RectTransform parentRect)
+                    {
+                        LayoutRebuilder.ForceRebuildLayoutImmediate(parentRect);
+                    }
+                });
 
             rect.DORotate(targetRotation, currentActDuration).SetEase(Ease.OutQuad);
 
@@ -133,7 +153,7 @@ public class UISpreader : MonoBehaviour
         {
             if (isOpen)
             {
-                yield return new WaitForSeconds(0.075f);
+                yield return new WaitForSeconds(0.025f);
                 sp.ForceOpen();
             }
             else sp.ForceClose();
@@ -144,7 +164,7 @@ public class UISpreader : MonoBehaviour
     {
         if (lastState != isOpen)
         {
-            SetState(lastState);
+            SetState(lastState, false, false);
             lastClickTime = Time.time;
         }
     }
@@ -152,7 +172,7 @@ public class UISpreader : MonoBehaviour
     {
         if (lastState)
         {
-            SetState(false);
+            SetState(false, false, false);
             lastClickTime = Time.time;
         }
     }
@@ -191,7 +211,14 @@ public class UISpreader : MonoBehaviour
                 Vector2 currentSize = extraReducedObject[i].sizeDelta;
                 currentSize.y = 0f;
                 if (instant) extraReducedObject[i].sizeDelta = currentSize;
-                else extraReducedObject[i].DOSizeDelta(currentSize, actDurtaion - timeReduction);
+                else extraReducedObject[i].DOSizeDelta(currentSize, actDurtaion - timeReduction)
+                .OnUpdate(() =>
+                {
+                    if (transform.parent is RectTransform parentRect)
+                    {
+                        LayoutRebuilder.ForceRebuildLayoutImmediate(parentRect);
+                    }
+                });
             }
         }
     }
@@ -209,7 +236,14 @@ public class UISpreader : MonoBehaviour
                 Vector2 currentSize = extraReducedObject[i].sizeDelta;
                 currentSize.y = extraReducedObjectHight[i];
                 if (instant) extraReducedObject[i].sizeDelta = currentSize;
-                else extraReducedObject[i].DOSizeDelta(currentSize, actDurtaion - timeReduction);
+                else extraReducedObject[i].DOSizeDelta(currentSize, actDurtaion - timeReduction)
+                .OnUpdate(() =>
+                {
+                    if (transform.parent is RectTransform parentRect)
+                    {
+                        LayoutRebuilder.ForceRebuildLayoutImmediate(parentRect);
+                    }
+                });
             }
         }
     }

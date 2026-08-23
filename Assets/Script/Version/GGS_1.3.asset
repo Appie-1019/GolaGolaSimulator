@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.3
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.3 (2026/7.8)
+  developerComment: "\uC774\uC820 \uC5B4\uB514\uC11C\uB098 \uC990\uACA8 \uBCF4\uC138\uC694.
+    \uB2F9\uC2E0\uC758 \uCE5C\uAD6C\uB098 \uAC00\uC871\uC774 \uB2F9\uC2E0\uC744 \uACBD\uBA78\uD560
+    \uAC70\uC608\uC694."
+  additional:
+  - item: "\uC774\uC81C \uBAA8\uBC14\uC77C\uC774\uB098 \uD328\uB4DC\uC640 \uAC19\uC740
+      \uAE30\uAE30\uC5D0\uC11C \uC870\uC791\uD560 \uC218 \uC788\uB3C4\uB85D \uC0C8\uB85C\uC6B4
+      \uC870\uC791 \uBC29\uC2DD\uC744 \uB3C4\uC785\uD588\uC2B5\uB2C8\uB2E4."
+    subItems:
+    - item: "\uB9C8\uC6B0\uC2A4\uC640 \uD0A4\uBCF4\uB4DC \uC870\uC791\uC740 \uBCC0\uACBD\uB418\uC9C0
+        \uC54A\uC558\uC2B5\uB2C8\uB2E4."
+      subItems: []
+  - item: "\uC774\uC81C \uBAA8\uBC14\uC77C \uC870\uC791\uC744 \uC704\uD55C \uC0C8\uB85C\uC6B4
+      \uD29C\uD1A0\uB9AC\uC5BC \uD1A0\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0\uAC00 \uC788\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  changes:
+  - item: "\uBC30\uACBD \uC124\uC815\uC5D0\uC11C \uC22B\uC790\uB97C \uC9C1\uC811
+      \uC785\uB825\uD558\uBA74 \uBC30\uACBD\uC774 \uBC14\uB00C\uC9C0 \uC54A\uB294
+      \uBB38\uC81C\uB97C \uD574\uACB0\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uC778\uD48B \uD544\uB4DC \uD3EC\uCEE4\uC2A4\uAC00 \uBA54\uB274\uB97C
+      \uAEBC\uB3C4 \uC720\uC9C0\uB418\uB294 \uBB38\uC81C\uB97C \uD574\uACB0\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "README\uC5D0 \uC788\uB358 \uADDC\uCE59\uC801\uC774\uC9C0 \uC54A\uC740
+      \uACF5\uBC31 \uBB38\uC790\uAC00 \uC81C\uAC70\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  etc: []

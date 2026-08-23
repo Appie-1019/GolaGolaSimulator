@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.1.1
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.1.1 (2026/7.8)
+  developerComment: ':sunglasses: :thumbsup:
+
+    (LOL legendary Unity Issue)'
+  additional:
+  - item: "\uC774\uC81C \uBAA8\uB4E0 \uBC84\uC804\uC5D0 \"\uAC1C\uBC1C\uC790 \uC758\uACAC\"\uC744
+      \uC791\uC131\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  changes:
+  - item: "\uB054\uCC0D\uD55C \uBC84\uC804 \uD45C\uAE30 \uC624\uB958\uB294 \uC218\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uC774\uC81C \uD574\uC0C1\uB3C4\uB294 FHD(1920 * 1080) \uC73C\uB85C \uACE0\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems:
+    - item: "\uC6D0\uB798 960 * 600 \uC774\uC5C8\uC2B5\uB2C8\uB2E4."
+      subItems: []
+  etc:
+  - item: "\uC774\uC81C \uAC1C\uBC1C\uC790\uAC00 README\uC5D0 \uC801\uC6A9\uD560
+      \uC218 \uC788\uB294 \uC9C0\uC815 \uAD6C\uBB38 \uBA87 \uAC1C\uB97C \uBC30\uC6E0\uC2B5\uB2C8\uB2E4."
+    subItems: []

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.1
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.1 (2026/7.8)
+  developerComment: "\"\uD1A0\uC2A4\uD2B8\" \uBA54\uC2DC\uC9C0\uB294 \uC5EC\uB7EC\uBD84\uC774
+    \uC0DD\uAC01\uD558\uB294 \uD1A0\uC2A4\uD2B8\uC5D0\uC11C \uC720\uB798\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\n\uC800\uB294
+    \uB538\uAE30 \uC7BC\uBCF4\uB2E4 \uCD08\uCF54 \uB9DB\uC744 \uC88B\uC544\uD569\uB2C8\uB2E4."
+  additional:
+  - item: "\uD1A0\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0\uAC00 \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems:
+    - item: "\uC774\uC81C \uB9C8\uC6B0\uC2A4 \uD1A0\uAE00 \uAE30\uB2A5\uC5D0 \uD1A0\uC2A4\uD2B8
+        \uBA54\uC2DC\uC9C0\uAC00 \uB098\uC635\uB2C8\uB2E4."
+      subItems: []
+    - item: "\uC774\uC81C GolaGolaSimulator\uB97C \uCF1C\uBA74 \uD1A0\uC2A4\uD2B8
+        \uBA54\uC2DC\uC9C0\uB85C \uD0A4\uBCF4\uB4DC \uD29C\uD1A0\uB9AC\uC5BC\uC774
+        \uB098\uC635\uB2C8\uB2E4."
+      subItems: []
+  - item: "\uD0A4\uBCF4\uB4DC [TAB] \uD0A4\uB85C \uD0AC \uC218 \uC788\uB294 \uC124\uC815\uC774
+      \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4"
+    subItems:
+    - item: "\uC774\uC81C \uC124\uC815\uC5D0\uC11C \uBC30\uACBD \uC0C9\uC0C1\uC744
+        \uBCC0\uACBD\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+      subItems: []
+  changes: []
+  etc: []

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.1.2
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.1.2 (2026/7.8)
+  developerComment: "\uC73C\uC545!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  additional: []
+  changes:
+  - item: "\uD574\uC0C1\uB3C4\uAC00 FHD(1920 * 1080) \uC73C\uB85C \uACE0\uC815\uB41C
+      \uAC83\uC774 \uAC1C\uBC1C\uC790\uC758 \uAE30\uBD84 \uD0D3\uC774\uC600\uB358
+      \uBB38\uC81C\uB294 \uD574\uACB0\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  etc: []

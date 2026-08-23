@@ -29,7 +29,7 @@ public class UselessSwitch : MonoBehaviour
             tmp.text = "GolaGola?";
             if (rainbowTextCoroutine != null) StopCoroutine(rainbowTextCoroutine);
             rainbowTextCoroutine = StartCoroutine(RainbowTMP());
-            if (BackgroundManager.Instance != null) BackgroundManager.Instance.DoARainbow();
+            if (BackgroundSetting.Instance != null) BackgroundSetting.Instance.DoARainbow();
         }
         else if (toggleCount == 40)
         {
@@ -38,7 +38,7 @@ public class UselessSwitch : MonoBehaviour
             toggleCount = 0;
             StopCoroutine(rainbowTextCoroutine);
             rainbowTextCoroutine = null;
-            if (BackgroundManager.Instance != null) BackgroundManager.Instance.StopARainbow();
+            if (BackgroundSetting.Instance != null) BackgroundSetting.Instance.StopARainbow();
         }
     }
 
@@ -46,7 +46,7 @@ public class UselessSwitch : MonoBehaviour
     {
         while (true)
         {
-            if (BackgroundManager.Instance != null) tmp.color = BackgroundManager.Instance.backgroundColor;
+            if (BackgroundSetting.Instance != null) tmp.color = BackgroundSetting.Instance.backgroundColor;
             yield return null;
         }
     }

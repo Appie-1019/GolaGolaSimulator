@@ -15,6 +15,9 @@ public class SwitchBox : MonoBehaviour
     [SerializeField] private SwitchBoxSection[] sections;
     [Header("Parts")]
     [SerializeField] private TextMeshProUGUI Text;
+    [Header("Sound")]
+    [SerializeField] private AudioClip buttonSound;
+
 
     public SwitchBoxSection currentData;
 
@@ -39,7 +42,7 @@ public class SwitchBox : MonoBehaviour
             return;
         }
 
-        SetSection(sections[0]);
+        SetSection(sections[0], false);
         index = 0;
     }
 
@@ -59,13 +62,18 @@ public class SwitchBox : MonoBehaviour
         SetSection(sections[index]);
     }
 
-    void SetSection(SwitchBoxSection newData)
+    void SetSection(SwitchBoxSection newData, bool useSound = true)
     {
         currentData = newData;
         Text.text = newData.DisplayName;
 
         intToggleListener?.Invoke(newData.SectionID);
         switchBoxDataToggleListener?.Invoke(newData);
+
+        if (useSound)
+        {
+            AudioManager.Instance?.Play2DSound(buttonSound, SoundType.UI);
+        }
     }
 
     public void AddToggleListener(System.Action<int> listener) => intToggleListener += listener;
