@@ -146,6 +146,8 @@ public class AudioInstance : MonoBehaviour
             yield return null;
         }
 
+        IsPaused = true;
+
         if (!isStopping)
         {
             onAudioFinished?.Invoke();

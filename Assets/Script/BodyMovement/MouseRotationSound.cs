@@ -28,7 +28,7 @@ public class MouseRotationSound : MonoBehaviour
 
     private void Update()
     {
-        if (!DataManager.saveData.UI.GolaSoundAllow) return;
+        if (!DataManager.SaveData.UI.GolaSoundAllow) return;
         if (pointer == null) return;
         if (MovementManager.Instance == null || MovementManager.Instance.currentType == MovementType.AppieSlide) return;
 
@@ -58,7 +58,9 @@ public class MouseRotationSound : MonoBehaviour
     private void OnFullRotationDetected(float normalizedSpeed)
     {
         if (AudioManager.Instance == null) return;
-        if (DataManager.saveData.UI.GolaSoundPitchAllow) normalizedSpeed = Mathf.Max(0.4f, normalizedSpeed) * 1.4f;
+
+        if (DataManager.SaveData.UI.RandomGolaSoundPitchAllow) normalizedSpeed = Random.Range(0.4f, 1.4f);
+        else if (DataManager.SaveData.UI.GolaSoundPitchAllow) normalizedSpeed = Mathf.Max(0.4f, normalizedSpeed) * 1.4f;
         else normalizedSpeed = 1;
         AudioManager.Instance.PlayRandom2DSound(sounds, SoundType.Game, 1, normalizedSpeed);
     }

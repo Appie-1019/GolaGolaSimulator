@@ -7,6 +7,8 @@ public class SceneChangeButton : MonoBehaviour
 {
     [Header("Scene name")]
     [SerializeField] private string targetSceneName;
+    [Header("Stop Sound Toggle")]
+    public bool stopSound = false;
 
     private Button button;
 
@@ -30,6 +32,11 @@ public class SceneChangeButton : MonoBehaviour
 
     private void OnButtonClicked()
     {
+        if (stopSound && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopSoundAll();
+        }
+
         if (!GameManager.TryLoadScene(targetSceneName))
         {
             Debug.LogWarning("이동할 씬 이름이 올바르지 않음");

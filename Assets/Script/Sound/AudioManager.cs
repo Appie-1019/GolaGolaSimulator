@@ -46,9 +46,9 @@ public class AudioManager : MonoBehaviour
             audioPool.Enqueue(newInstance);
         }
 
-        SetVolume(DataManager.saveData.UI.MasterVolume / 100, SoundType.Master);
-        SetVolume(DataManager.saveData.UI.GameVolume / 100, SoundType.Game);
-        SetVolume(DataManager.saveData.UI.UIVolume / 100, SoundType.UI);
+        SetVolume(DataManager.SaveData.UI.MasterVolume / 100, SoundType.Master);
+        SetVolume(DataManager.SaveData.UI.GameVolume / 100, SoundType.Game);
+        SetVolume(DataManager.SaveData.UI.UIVolume / 100, SoundType.UI);
     }
 
     public void SetVolume(float volume0to1, SoundType soundType = SoundType.Master)

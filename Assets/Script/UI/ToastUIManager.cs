@@ -84,7 +84,7 @@ public class ToastUIManager : MonoBehaviour
 
     public void AddToast(string message, Color textColor)
     {
-        if (!DataManager.saveData.UI.ToastMessageAllow) return;
+        if (!DataManager.SaveData.UI.ToastMessageAllow) return;
         if (string.IsNullOrWhiteSpace(message)) return;
 
         StackAllToast();

@@ -20,7 +20,7 @@ public class WaitDataAndMoveScene : MonoBehaviour
 
     private IEnumerator WaitAndMoveCoroutine()
     {
-        yield return new WaitUntil(() => DataManager.saveData != null);
+        yield return new WaitUntil(() => DataManager.SaveData != null);
 
         SceneManager.LoadScene(targetSceneName);
     }

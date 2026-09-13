@@ -324,4 +324,11 @@ public class BackdoorTextSection : MonoBehaviour
 
         transform.localScale = ogSize;
     }
+
+    public void StopImmediate()
+    {
+        StopAllCoroutines();
+        appearCoroutine = null;
+        BackdoorText.Instance.BackToPool(this);
+    }
 }

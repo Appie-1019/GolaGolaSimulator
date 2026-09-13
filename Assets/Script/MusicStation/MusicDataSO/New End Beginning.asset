@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2947339b2aecf5647a46fc2419c895d5, type: 3}
+  m_Name: New End Beginning
+  m_EditorClassIdentifier: Assembly-CSharp::MusicData
+  audioClip: {fileID: 8300000, guid: 0a09eefa1f65c754fb02794f5aae696c, type: 3}
+  title: New End Beginning
+  artist: Appie
+  description: "GolaGolaSimulator\uC758 OST\uC785\uB2C8\uB2E4.\n\uD06C\uB808\uB527
+    \uD654\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+  coverImage: {fileID: 21300000, guid: bf471e162faa7b042935715915edda3d, type: 3}
+  discImage: {fileID: 21300000, guid: 9204bdf3559cec045855cef6063a9a81, type: 3}

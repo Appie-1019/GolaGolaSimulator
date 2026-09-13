@@ -119,6 +119,290 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &357877579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357877580}
+  - component: {fileID: 357877584}
+  - component: {fileID: 357877583}
+  - component: {fileID: 357877582}
+  - component: {fileID: 357877581}
+  m_Layer: 5
+  m_Name: ToTycoon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &357877580
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357877579}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 797952092}
+  m_Father: {fileID: 1813191899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -510, y: 240}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &357877581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357877579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 357877582}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &357877582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357877579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e193314fff453ea4784c55581d620115, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &357877583
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357877579}
+  m_CullTransparentMesh: 1
+--- !u!114 &357877584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357877579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a91be0c1dbb9fe418ab4c0aed0767f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackDoorButon
+  buttonImageFrame:
+  - {fileID: 21300000, guid: e193314fff453ea4784c55581d620115, type: 3}
+  - {fileID: 21300000, guid: 351710baf48d7db49bcfd8e2b743aad4, type: 3}
+  - {fileID: 21300000, guid: 0943a3e0f41383f4d8d241d9cd4961c9, type: 3}
+  - {fileID: 21300000, guid: a504c960bfecc544e9c9722922bbdbd2, type: 3}
+  frameDuration: 0.2
+  tooltipObject: {fileID: 797952091}
+  sceneName: Tycoon
+--- !u!1 &393470637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 393470638}
+  - component: {fileID: 393470642}
+  - component: {fileID: 393470641}
+  - component: {fileID: 393470640}
+  - component: {fileID: 393470639}
+  m_Layer: 5
+  m_Name: ToHome
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &393470638
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393470637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 996023318}
+  m_Father: {fileID: 1813191899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 300, y: 150}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &393470639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393470637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 393470640}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &393470640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393470637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9a3bf02815b57284db4fa8fa4a84b805, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &393470641
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393470637}
+  m_CullTransparentMesh: 1
+--- !u!114 &393470642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393470637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a91be0c1dbb9fe418ab4c0aed0767f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackDoorButon
+  buttonImageFrame:
+  - {fileID: 21300000, guid: 9a3bf02815b57284db4fa8fa4a84b805, type: 3}
+  - {fileID: 21300000, guid: 5c4fd2209ea2dfd4cba761d3fcdbd190, type: 3}
+  - {fileID: 21300000, guid: 0539ed60c244b0d47bd332b73baa3483, type: 3}
+  - {fileID: 21300000, guid: 2a61f9fa46944cd439277d6305a34233, type: 3}
+  frameDuration: 0.2
+  tooltipObject: {fileID: 996023317}
+  sceneName: Main
 --- !u!1001 &534614675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,1602 +489,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0d7678e15241449add28b378f1b29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackdoorTextPrinter
-  sections:
-  - firstWaitTime: 2
-    data:
-    - textSections:
-      - text: "\uC548\uB155"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uCC98\uC74C\uC774\uB2C8\uAE4C \uB0B4 \uC790\uAE30\uC18C\uAC1C\uB97C
-          \uD560\uAC8C..."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uB0B4 \uC774\uB984\uC740 \uB531\uD788 \uC5C6\uC5B4. "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uB0A0 \uB9CC\uB4E0 \uBD84"
-        mainColor: {r: 0.8113208, g: 0, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.1
-        appear: 0
-        idle: 1
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uAED8\uC11C \uADC0\uCC2E\uC73C\uC168\uB098 \uBD10."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uADF8\uB798\uB3C4  "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uBA4B\uC9C4 \uBAA9\uC18C\uB9AC"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1.1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uAC00 \uC788\uC73C\uB2C8\uAE4C \uB410\uC5B4."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC5B4\uCA0C\uB4E0, \uB110 \uC704\uD55C \uB098\uC05C \uC18C\uC2DD\uC774
-          \uC788\uC5B4."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC5EC\uAE34 "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uC544\uBB34\uAC83\uB3C4 \uC5C6\uB2E4\uB294 \uAC70"
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.5
-        appear: 0
-        idle: 2
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uC57C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC65C\uB0D0\uD558\uBA74..."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.25
-    - textSections:
-      - text: "\uC544\uBB34\uAC83\uB3C4 \uC5C6\uAC70\uB4E0"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1.1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uB2E4\uC2DC \uBC16\uC73C\uB85C \uB0B4\uBCF4\uB0B4 \uC904\uAC8C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uB9CC\uC57D \uB2E4\uC2DC \uB3CC\uC544\uC624\uBA74..."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC5EC\uC804\uD788 \uC544\uBB34\uAC83\uB3C4 \uC5C6\uC744 \uAC70\uC57C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC798 \uAC00!"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-  - firstWaitTime: 2
-    data:
-    - textSections:
-      - text: "\uB2E4\uC2DC \uC548\uB155"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC694\uC998 \uD560\uB9CC\uD55C \uAC8C \uB5A8\uC5B4\uC84C\uB098 \uBCF4\uB124"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uD639\uC2DC \uC7AC\uBBF8\uC788\uB294 \uAC83\uB4E4 \uCD94\uCC9C\uD574
-          \uC918?"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 5
-    - textSections:
-      - text: "\uC544 \uB9DE\uB2E4. \uB108 \uB9D0 \uBABB\uD558\uC9C0."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 0.25
-    - textSections:
-      - text: "\uC5D0\uD5F4..."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 1
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-    - textSections:
-      - text: "\uC9C0\uB8E8\uD560 \uB54C \uD560 \uB9CC\uD55C \uAC70..."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 3
-    - textSections:
-      - text: "\uC5B4\uB5A4 \uB768\uBE61\uC774\uAC00 \uB9CC\uB4E0 "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: GolaGolaSimulator
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uD558\uAE30?"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 0.5
-  - firstWaitTime: 2
-    data:
-    - textSections:
-      - text: GolaGolaSimulator
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uB294 \uC5B4\uB560\uC5B4?"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uB09C \uAC70\uAE30\uB85C \uB110 \uBCF4\uB0BC \uC218\uB9CC \uC788\uC5B4"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC9C1\uC811 \uD574\uBCFC \uC21C \uC5C6\uB354\uB77C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uB098\uC911\uC5D0 \uB9D0\uD560 \uC218 \uC788\uAC8C \uB418\uBA74,"
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.5
-        appear: 0
-        idle: 2
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uC18C\uAC10\uC774\uB77C\uB3C4 \uB9D0\uD574 \uC918."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-  - firstWaitTime: 2
-    data:
-    - textSections:
-      - text: GitHub
-        mainColor: {r: 0.05882353, g: 0.7490196, b: 0.24313726, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.075
-        idleInterval: 0.25
-        appear: 0
-        idle: 2
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uC5B4\uB518\uAC00\uC5D0 \uC788\uB294 \uACE0\uB300 \uC720\uBB3C\uC5D0
-          \uB300\uD55C \uC774\uC57C\uAE30\uB97C \uD574 \uC904\uAC8C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 3
-    - textSections:
-      - text: "\uC65C \uB9D0\uD558\uB0D0\uBA74... "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uB124\uAC00 \uC2EC\uC2EC\uD558\uC796\uC544."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1.1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2.2
-    - textSections:
-      - text: "\uC804\uC124\uC5D0 \uB530\uB974\uBA74..."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.5
-    - textSections:
-      - text: "\uBD88\uBC95\uC801\uC778"
-        mainColor: {r: 1, g: 0, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 1
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uBB3C\uAC74\uC774 \uC788\uB300."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-  - firstWaitTime: 2
-    data:
-    - textSections:
-      - text: "\uC5EC\uAE30 \uC624\uB294 \uC0AC\uB78C\uC774 \uC0DD\uAC01\uBCF4\uB2E4
-          \uB9CE\uC740 \uAC70 \uC54C\uC544? "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC5B4\uC81C\uB294 \uBB34\uB824 "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "3\uBA85\uC774\uB098"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1.1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uBC29\uBB38\uD588\uB2E4\uB2C8\uAE4C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uAC54\uB0B4\uB4E4\uC740 \uB108\uBB34 \uBA4D\uCCAD\uD574\uC11C  "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uB9D0\uD558\uB294 \uBC95\uC744 \uBAA8\uB974\uB354\uB77C"
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.075
-        idleInterval: 0.3
-        appear: 0
-        idle: 2
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 3
-    - textSections:
-      - text: "\uC544"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-    - textSections:
-      - text: "\uB9DE\uB2E4"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-    - textSections:
-      - text: "\uB108\uB3C4 \uB9D0\uC744 \uBABB \uD558\uC9C0"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-    - textSections:
-      - text: "\uB108\uB3C4 \uBA4D\uCCAD\uD55C\uAC00 \uBD10"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-  - firstWaitTime: 2
-    data:
-    - textSections:
-      - text: "\uC5EC\uAE30 \uC624\uB294 \uC0AC\uB78C\uC774 \uC0DD\uAC01\uBCF4\uB2E4
-          \uB9CE\uC740 \uAC70 \uC54C\uC544? "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC5B4\uC81C\uB294 \uBB34\uB824 "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "3\uBA85\uC774\uB098"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 1.1
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 3
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uBC29\uBB38\uD588\uB2E4\uB2C8\uAE4C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC7A0\uAE50. \uC774\uAC70 \uB9D0\uD588\uC5C8\uB098?"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC57D\uAC04 \uD5F7\uAC08\uB9AC\uB124. \uB0B4\uAC00 \uC5B4"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\u3148"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: fb91ed1c48b39444f9518b6318a25c66, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 3
-    - textSections:
-      - text: "\uC624"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-    - textSections:
-      - text: "\uC774\uB7F0."
-        mainColor: {r: 1, g: 0, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 1
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.25
-    - textSections:
-      - text: "\uD638\uCD9C \uBCA8\uC774\uC57C."
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.25
-    - textSections:
-      - text: "\uAC00\uBD10\uC57C \uD574."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.25
-    - textSections:
-      - text: "\uC544\uB9C8 "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.05
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uD55C\uB3D9\uC548 \uB2E4\uC2DC \uBABB \uB9CC\uB0A0 \uAC70\uC57C."
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.2
-        appear: 0
-        idle: 2
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC774 \uACF5\uAC04\uC744 \uB2E4\uC2DC \uB9CC\uB4E4\uBA74"
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.05
-        idleInterval: 0.25
-        appear: 0
-        idle: 2
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uB3CC\uC544\uC62C\uAC8C."
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uAE30\uB2E4\uB9AC\uB294 \uAC70 \uB9D0\uACE0, \uB2E4\uB978 \uBC29\uBC95\uB3C4
-          \uC788\uC5B4. "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
-    - textSections:
-      - text: "\uC774 \uC138\uACC4\uB97C \uC7AC\uC2DC\uC791\uD574 \uBC84\uB824"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.75
-    - textSections:
-      - text: "\uBC29\uBC95\uC740 \uBAA8\uB974\uC9C0\uB9CC, \uAC00\uB2A5\uD560 \uAC70\uC57C"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: .
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: fb91ed1c48b39444f9518b6318a25c66, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1
-    - textSections:
-      - text: "\uC9DC\uC99D\uB098\uAC8C \uD558\uB124!"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 1.5
-    - textSections:
-      - text: "\uC548\uB155! "
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: "\uB2E4\uC74C \uBC84\uC804\uC5D0\uC11C"
-        mainColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0.2
-        idleInterval: 1
-        appear: 0
-        idle: 3
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      - text: " \uB9CC\uB098!"
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds:
-        - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
-        - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
-        - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
-        - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
-        - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
-      textInterval: 0.05
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 3
-  - firstWaitTime: 0
-    data:
-    - textSections:
-      - text: ...
-        mainColor: {r: 1, g: 1, b: 1, a: 0.5019608}
-        subColor: {r: 0, g: 0, b: 0, a: 0}
-        colorTransitionTime: 0
-        appearTime: 0
-        disappearTime: 0
-        idlePower: 0
-        idleInterval: 0
-        appear: 0
-        idle: 0
-        disappear: 0
-        color: 0
-        typeSounds: []
-      textInterval: 0
-      textSize: 4
-      textSpacing: 0.4
-      showDuration: 2
+  firstMeetingDialogue: {fileID: 11400000, guid: 9d81e49b649aefb4abaf6966ed235a71, type: 2}
+  randomInDialogue:
+  - {fileID: 11400000, guid: 5a3eb8d8afbd46f4a99db05fc5a678a4, type: 2}
+  - {fileID: 11400000, guid: 49cdc5052698ce64e84155b8ff15feb2, type: 2}
+  - {fileID: 11400000, guid: b3dbb2f2fe10d5c4fa838ef0d9f2ac7c, type: 2}
+  - {fileID: 11400000, guid: 874c2317357ad2d448a7cd029b4d72f7, type: 2}
+  - {fileID: 11400000, guid: a666f261c5c90f547bf975abc5a9fb5e, type: 2}
+  - {fileID: 11400000, guid: f6d5adafed7ce1c45aadd5d123350ca1, type: 2}
+  rareChance: 1
+  rareInDialogue:
+  - {fileID: 11400000, guid: 11cc21ef0b3c63e4fbc525fac2822027, type: 2}
+  randomOutDialogue:
+  - {fileID: 11400000, guid: 192dd93d37a39bb47bf2e646c7c60f0c, type: 2}
+  - {fileID: 11400000, guid: 094b3e910c0835741bdd8bc12a1b4525, type: 2}
+  - {fileID: 11400000, guid: ac33aba687868f04dbe8cbad421d0cab, type: 2}
+  - {fileID: 11400000, guid: 9d89806ef1d989a419290d5db87dce9d, type: 2}
+  - {fileID: 11400000, guid: 6011c49263598164c89e732fe4e66e4e, type: 2}
+  - {fileID: 11400000, guid: e0046252510dd1449987b9a455784be8, type: 2}
+  bgm: {fileID: 8300000, guid: 928e06da013b6d94e9dac87625781df0, type: 3}
+  sceneButtons: []
 --- !u!4 &636424525
 Transform:
   m_ObjectHideFlags: 0
@@ -1816,7 +524,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &974692219
+--- !u!1 &797952091
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1824,47 +532,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 974692220}
-  - component: {fileID: 974692222}
-  - component: {fileID: 974692221}
+  - component: {fileID: 797952092}
+  - component: {fileID: 797952094}
+  - component: {fileID: 797952093}
   m_Layer: 5
-  m_Name: Triangle
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!224 &974692220
+--- !u!224 &797952092
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974692219}
+  m_GameObject: {fileID: 797952091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1813191899}
+  m_Father: {fileID: 357877580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &974692221
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 50}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &797952093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974692219}
+  m_GameObject: {fileID: 797952091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -1873,23 +581,359 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02f618fb7d313924486e2838c1c152ab, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &974692222
+  m_text: "GolaGola \uD0C0\uC774\uCFE4"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_sharedMaterial: {fileID: -344626005601700747, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &797952094
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974692219}
+  m_GameObject: {fileID: 797952091}
+  m_CullTransparentMesh: 1
+--- !u!1 &912129544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912129545}
+  - component: {fileID: 912129547}
+  - component: {fileID: 912129546}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &912129545
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912129544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1731273446}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 50}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &912129546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912129544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Flappie Gola
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_sharedMaterial: {fileID: -344626005601700747, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &912129547
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912129544}
+  m_CullTransparentMesh: 1
+--- !u!1 &996023317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996023318}
+  - component: {fileID: 996023320}
+  - component: {fileID: 996023319}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &996023318
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996023317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393470638}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 50}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &996023319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996023317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "GolaGola \uC2DC\uBBAC\uB808\uC774\uD130"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_sharedMaterial: {fileID: -344626005601700747, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &996023320
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996023317}
   m_CullTransparentMesh: 1
 --- !u!1 &1337859229
 GameObject:
@@ -2153,6 +1197,427 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1696045352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696045353}
+  - component: {fileID: 1696045355}
+  - component: {fileID: 1696045354}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1696045353
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696045352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705201596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 50}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1696045354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696045352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "GolaGola \uBBA4\uC9C1"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_sharedMaterial: {fileID: -344626005601700747, guid: e9cc02d3c47e37843a527c05a7bdfeac, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1696045355
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696045352}
+  m_CullTransparentMesh: 1
+--- !u!1 &1705201595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705201596}
+  - component: {fileID: 1705201600}
+  - component: {fileID: 1705201599}
+  - component: {fileID: 1705201598}
+  - component: {fileID: 1705201597}
+  m_Layer: 5
+  m_Name: ToMusicStation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1705201596
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705201595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1696045353}
+  m_Father: {fileID: 1813191899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -300, y: -250}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1705201597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705201595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1705201598}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1705201598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705201595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 75287475eabc91349b790b8b983884b8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1705201599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705201595}
+  m_CullTransparentMesh: 1
+--- !u!114 &1705201600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705201595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a91be0c1dbb9fe418ab4c0aed0767f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackDoorButon
+  buttonImageFrame:
+  - {fileID: 21300000, guid: 75287475eabc91349b790b8b983884b8, type: 3}
+  - {fileID: 21300000, guid: 9f68de7b183c08d4c8a10b01e57ceb85, type: 3}
+  - {fileID: 21300000, guid: f5a13aca06a051644bb0289012822ad5, type: 3}
+  - {fileID: 21300000, guid: a22f3c8233b749446bac2a629e090e37, type: 3}
+  frameDuration: 0.2
+  tooltipObject: {fileID: 1696045352}
+  sceneName: Music
+--- !u!1 &1731273445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731273446}
+  - component: {fileID: 1731273450}
+  - component: {fileID: 1731273449}
+  - component: {fileID: 1731273448}
+  - component: {fileID: 1731273447}
+  m_Layer: 5
+  m_Name: ToFlappieGola
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1731273446
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731273445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 912129545}
+  m_Father: {fileID: 1813191899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 202, y: -197}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1731273447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731273445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1731273448}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1731273448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731273445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: af82b079e2238bf45be56de19e82e985, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1731273449
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731273445}
+  m_CullTransparentMesh: 1
+--- !u!114 &1731273450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731273445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a91be0c1dbb9fe418ab4c0aed0767f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackDoorButon
+  buttonImageFrame:
+  - {fileID: 21300000, guid: af82b079e2238bf45be56de19e82e985, type: 3}
+  - {fileID: 21300000, guid: 50943244ce005404da674eb6a44fd407, type: 3}
+  - {fileID: 21300000, guid: e0614b250eb1a2044b5f17c76e9b08ff, type: 3}
+  - {fileID: 21300000, guid: e15b40c117973fb49883d7a1f44b022c, type: 3}
+  frameDuration: 0.2
+  tooltipObject: {fileID: 912129544}
+  sceneName: FlappieGola
 --- !u!1 &1813191895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +1695,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2247,7 +1712,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 974692220}
+  - {fileID: 357877580}
+  - {fileID: 393470638}
+  - {fileID: 1705201596}
+  - {fileID: 1731273446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2255,6 +1723,64 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2136599040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136599042}
+  - component: {fileID: 2136599041}
+  m_Layer: 0
+  m_Name: printer_Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2136599041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136599040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0d7678e15241449add28b378f1b29a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackdoorTextPrinter
+  firstMeetingDialogue: {fileID: 11400000, guid: 9d81e49b649aefb4abaf6966ed235a71, type: 2}
+  randomInDialogue:
+  - {fileID: 11400000, guid: 11cc21ef0b3c63e4fbc525fac2822027, type: 2}
+  rareChance: 1
+  rareInDialogue: []
+  randomOutDialogue:
+  - {fileID: 11400000, guid: 192dd93d37a39bb47bf2e646c7c60f0c, type: 2}
+  - {fileID: 11400000, guid: 094b3e910c0835741bdd8bc12a1b4525, type: 2}
+  - {fileID: 11400000, guid: ac33aba687868f04dbe8cbad421d0cab, type: 2}
+  - {fileID: 11400000, guid: 9d89806ef1d989a419290d5db87dce9d, type: 2}
+  - {fileID: 11400000, guid: 6011c49263598164c89e732fe4e66e4e, type: 2}
+  - {fileID: 11400000, guid: e0046252510dd1449987b9a455784be8, type: 2}
+  bgm: {fileID: 0}
+  sceneButtons: []
+--- !u!4 &2136599042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136599040}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2263,5 +1789,6 @@ SceneRoots:
   - {fileID: 1605527688}
   - {fileID: 534614675}
   - {fileID: 1337859231}
-  - {fileID: 1681519106}
   - {fileID: 636424525}
+  - {fileID: 2136599042}
+  - {fileID: 1681519106}

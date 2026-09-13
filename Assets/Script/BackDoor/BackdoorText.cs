@@ -1,41 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Collections;
 using UnityEngine;
-
-[System.Serializable]
-public struct BackdoorTextData
-{
-    public BackdoorTextDataSection[] textSections;
-    public float textInterval;
-    public float textSize;
-    public float textSpacing;
-    public float showDuration;
-}
-
-[System.Serializable]
-public struct BackdoorTextDataSection
-{
-    [Header("Text")]
-    public string text;
-    public Color mainColor;
-    public Color subColor;
-
-    [Header("Time")]
-    public float colorTransitionTime;
-    public float appearTime;
-    public float disappearTime;
-
-    [Header("Operation")]
-    public float idlePower;
-    public float idleInterval;
-    public TextSectionAppear appear;
-    public TextSectionIdle idle;
-    public TextSectionDisappear disappear;
-    public TextSectionColor color;
-    [Header("Sound")]
-    public AudioClip[] typeSounds;
-}
 
 public class BackdoorText : MonoBehaviour
 {
@@ -96,6 +61,24 @@ public class BackdoorText : MonoBehaviour
         textPool.Enqueue(section);
         activeText.Remove(section);
         section.gameObject.SetActive(false);
+    }
+
+    public void StopAllTextImmediate()
+    {
+        if (showTextCoroutine == null)
+        {
+            Debug.LogWarning("[BackdoorText] 중지하려 했지만 작동하고 있지 않음.");
+            return;
+        }
+
+        StopCoroutine(showTextCoroutine);
+        showTextCoroutine = null;
+
+        List<BackdoorTextSection> sectionsToClear = new List<BackdoorTextSection>(activeText);
+        for (int i = 0; i < sectionsToClear.Count; i++)
+        {
+            sectionsToClear[i].StopImmediate();
+        }
     }
 
     IEnumerator ShowTextCoroutine(BackdoorTextData data)
@@ -281,24 +264,4 @@ public class BackdoorText : MonoBehaviour
         if (count <= 0) return 0f;
         return -((count - 1) * spacing) / 2f;
     }
-}
-
-public enum TextSectionAppear
-{
-    None, Fade, Expansion
-}
-
-public enum TextSectionIdle
-{
-    None, Vibration, Wobble, Bobbing
-}
-
-public enum TextSectionDisappear
-{
-    None, Fade, Contraction
-}
-
-public enum TextSectionColor
-{
-    None, Fade, Twinkling, Rainbow
 }

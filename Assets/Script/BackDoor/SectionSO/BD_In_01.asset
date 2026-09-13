@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ae11e2b8e35d443b12bae5fb4c76ab, type: 3}
+  m_Name: BD_In_01
+  m_EditorClassIdentifier: Assembly-CSharp::BackdoorPrinterSection
+  firstWaitTime: 0.25
+  data:
+  - textSections:
+    - text: "\uC5B4\uB514\uB85C \uAC08\uB798?"
+      mainColor: {r: 1, g: 1, b: 1, a: 1}
+      subColor: {r: 0, g: 0, b: 0, a: 0}
+      colorTransitionTime: 0
+      appearTime: 0
+      disappearTime: 0
+      idlePower: 0
+      idleInterval: 0
+      appear: 0
+      idle: 0
+      disappear: 0
+      color: 0
+      typeSounds:
+      - {fileID: 8300000, guid: 4f827aee90ba4244185088017a7b4dbe, type: 3}
+      - {fileID: 8300000, guid: afc3038f8726bd940afcb23ff809b2b1, type: 3}
+      - {fileID: 8300000, guid: 5ea1d9e078f22744f81ee184a68a2c40, type: 3}
+      - {fileID: 8300000, guid: 141e43a3ea53c6047841982fbe9a28d6, type: 3}
+      - {fileID: 8300000, guid: d050aa85d97ce8d409e19110ca81bdf5, type: 3}
+    textInterval: 0.05
+    textSize: 4
+    textSpacing: 0.4
+    showDuration: Infinity

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2947339b2aecf5647a46fc2419c895d5, type: 3}
+  m_Name: Microwave oven
+  m_EditorClassIdentifier: Assembly-CSharp::MusicData
+  audioClip: {fileID: 8300000, guid: cf13566b8af54f64db264fd5de70c3e2, type: 3}
+  title: Microwave oven
+  artist: Appie
+  description: "\uC774\uAC74 \uD14C\uC2A4\uD2B8\uC6A9 \uC74C\uC545\uC785\uB2C8\uB2E4.\n\uC560\uCD08\uC5D0
+    GolaGolaSimulator\uB97C \uC704\uD558\uC5EC \uB9CC\uB4E4\uC5B4\uC9C0\uC9C0 \uC54A\uC558\uACE0,
+    \uC0AC\uC6A9\uD558\uC9C0\uB3C4 \uC54A\uC558\uC9C0\uB9CC\n\uC774\uBBF8 \uB9CC\uB4E0
+    \uB370\uC774\uD130\uAC00 \uC544\uAE4C\uC6CC\uC11C \uD3EC\uD568\uD558\uAE30\uB85C
+    \uD588\uC2B5\uB2C8\uB2E4.\n\uAC8C\uB2E4\uAC00, \uB4E3\uACE0 \uC788\uC73C\uBA74
+    \uBA4D\uCCAD\uD574\uC9C0\uB294 \uAE30\uBD84\uC774 \uB4ED\uB2C8\uB2E4!"
+  coverImage: {fileID: 21300000, guid: 4b7fc3d865914eb4ebd7bfccaf92413e, type: 3}
+  discImage: {fileID: 21300000, guid: ef20afbfb3fc379429fe102e03840c35, type: 3}

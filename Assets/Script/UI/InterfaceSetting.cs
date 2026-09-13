@@ -9,7 +9,7 @@ public class InterfaceSetting : MonoBehaviour
 
     void Start()
     {
-        toastToggleSwitch.InitEnable(DataManager.saveData.UI.ToastMessageAllow, true);
+        toastToggleSwitch.InitEnable(DataManager.SaveData.UI.ToastMessageAllow, true);
         StartCoroutine(StartAct());
     }
 
@@ -23,13 +23,13 @@ public class InterfaceSetting : MonoBehaviour
     {
         if (enable)
         {
-            DataManager.saveData.UI.ToastMessageAllow = enable;
+            DataManager.SaveData.UI.ToastMessageAllow = enable;
             ToastUIManager.Instance?.AddToast(GetRandomMessage(toastEnableMessages), Color.yellow);
         }
         else
         {
             ToastUIManager.Instance.AddToast(GetRandomMessage(toastDisableMessages), Color.yellow);
-            DataManager.saveData.UI.ToastMessageAllow = enable;
+            DataManager.SaveData.UI.ToastMessageAllow = enable;
         }
 
         DataManager.Save();

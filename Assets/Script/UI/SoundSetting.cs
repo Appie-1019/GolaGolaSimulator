@@ -9,55 +9,64 @@ public class SoundSetting : MonoBehaviour
     [Header("Toggle")]
     public ToggleSwitch golaSoundSwitch;
     public ToggleSwitch golaSoundPitchSwitch;
+    public ToggleSwitch randomGolaSoundPitchSwitch;
 
     void Awake()
     {
-        masterVolumeSlider.AddListener(SetMasterVolume);
-        gameVolumeSlider.AddListener(SetGameVolume);
-        UIVolumeSlider.AddListener(SetUIVolume);
-        golaSoundSwitch.AddToggleListener(SetGolaSoundEnable);
-        golaSoundPitchSwitch.AddToggleListener(SetGolaSoundPitchEnable);
+        if (masterVolumeSlider != null) masterVolumeSlider.AddListener(SetMasterVolume);
+        if (gameVolumeSlider != null) gameVolumeSlider.AddListener(SetGameVolume);
+        if (UIVolumeSlider != null) UIVolumeSlider.AddListener(SetUIVolume);
+        if (golaSoundSwitch != null) golaSoundSwitch.AddToggleListener(SetGolaSoundEnable);
+        if (golaSoundPitchSwitch != null) golaSoundPitchSwitch.AddToggleListener(SetGolaSoundPitchEnable);
+        if (randomGolaSoundPitchSwitch != null) randomGolaSoundPitchSwitch.AddToggleListener(SetRandomGolaSoundPitchEnable);
     }
 
     private void Start()
     {
-        masterVolumeSlider.Value = DataManager.saveData.UI.MasterVolume;
-        gameVolumeSlider.Value = DataManager.saveData.UI.GameVolume;
-        UIVolumeSlider.Value = DataManager.saveData.UI.UIVolume;
-        golaSoundSwitch.SetEnable(DataManager.saveData.UI.GolaSoundAllow, true);
-        golaSoundPitchSwitch.SetEnable(DataManager.saveData.UI.GolaSoundPitchAllow, true);
+        if (masterVolumeSlider != null) masterVolumeSlider.Value = DataManager.SaveData.UI.MasterVolume;
+        if (gameVolumeSlider != null) gameVolumeSlider.Value = DataManager.SaveData.UI.GameVolume;
+        if (UIVolumeSlider != null) UIVolumeSlider.Value = DataManager.SaveData.UI.UIVolume;
+        if (golaSoundSwitch != null) golaSoundSwitch.SetEnable(DataManager.SaveData.UI.GolaSoundAllow, true);
+        if (golaSoundPitchSwitch != null) golaSoundPitchSwitch.SetEnable(DataManager.SaveData.UI.GolaSoundPitchAllow, true);
+        if (randomGolaSoundPitchSwitch != null) randomGolaSoundPitchSwitch.SetEnable(DataManager.SaveData.UI.RandomGolaSoundPitchAllow, true);
     }
 
     private void SetMasterVolume(float volume)
     {
         AudioManager.Instance?.SetVolume(volume / 100, SoundType.Master);
-        DataManager.saveData.UI.MasterVolume = masterVolumeSlider.Value;
+        DataManager.SaveData.UI.MasterVolume = masterVolumeSlider.Value;
         DataManager.Save();
     }
 
     private void SetGameVolume(float volume)
     {
         AudioManager.Instance?.SetVolume(volume / 100, SoundType.Game);
-        DataManager.saveData.UI.GameVolume = gameVolumeSlider.Value;
+        DataManager.SaveData.UI.GameVolume = gameVolumeSlider.Value;
         DataManager.Save();
     }
 
     private void SetUIVolume(float volume)
     {
         AudioManager.Instance?.SetVolume(volume / 100, SoundType.UI);
-        DataManager.saveData.UI.UIVolume = UIVolumeSlider.Value;
+        DataManager.SaveData.UI.UIVolume = UIVolumeSlider.Value;
         DataManager.Save();
     }
 
     private void SetGolaSoundEnable(bool enable)
     {
-        DataManager.saveData.UI.GolaSoundAllow = enable;
+        DataManager.SaveData.UI.GolaSoundAllow = enable;
         DataManager.Save();
     }
 
     private void SetGolaSoundPitchEnable(bool enable)
     {
-        DataManager.saveData.UI.GolaSoundPitchAllow = enable;
+        DataManager.SaveData.UI.GolaSoundPitchAllow = enable;
+        DataManager.Save();
+    }
+
+    private void SetRandomGolaSoundPitchEnable(bool enable)
+    {
+        DataManager.SaveData.UI.RandomGolaSoundPitchAllow = enable;
         DataManager.Save();
     }
 }

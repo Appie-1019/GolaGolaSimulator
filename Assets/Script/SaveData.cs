@@ -1,11 +1,11 @@
-using System.Collections.Generic;
-
 [System.Serializable]
 public class SaveData
 {
     public MainUISaveData UI;
     public BackdoorSaveData Backdoor;
     public SaveVersion Version;
+    public TycoonData Tycoon;
+    public FlappieGolaData FlappieGola;
 
     public static SaveData Default => new SaveData
     {
@@ -17,6 +17,7 @@ public class SaveData
             ToastMessageAllow = true,
             GolaSoundAllow = true,
             GolaSoundPitchAllow = false,
+            RandomGolaSoundPitchAllow = false
         },
 
         Backdoor = new BackdoorSaveData
@@ -26,8 +27,17 @@ public class SaveData
 
         Version = new SaveVersion
         {
-            Current = "1.5.2",
-            All = new HashSet<string>()
+            Current = "1.6"
+        },
+
+        Tycoon = new TycoonData
+        {
+            bestTime = -1019.0f,
+        },
+
+        FlappieGola = new FlappieGolaData
+        {
+            bestScore = 0
         }
     };
 }
@@ -42,6 +52,7 @@ public struct MainUISaveData
     public bool ToastMessageAllow;
     public bool GolaSoundAllow;
     public bool GolaSoundPitchAllow;
+    public bool RandomGolaSoundPitchAllow;
 }
 
 [System.Serializable]
@@ -51,9 +62,19 @@ public struct BackdoorSaveData
 }
 
 [System.Serializable]
+public struct TycoonData
+{
+    public float bestTime;
+}
+
+[System.Serializable]
+public struct FlappieGolaData
+{
+    public int bestScore;
+}
+
+[System.Serializable]
 public struct SaveVersion
 {
     public string Current;
-
-    public HashSet<string> All;
 }

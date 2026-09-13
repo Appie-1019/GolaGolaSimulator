@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance { get; private set; }
-    public static SaveData saveData;
+    public static SaveData SaveData;
 
     public static bool isMobile { get; private set; }
 
@@ -22,7 +21,7 @@ public class DataManager : MonoBehaviour
 
         isMobile = IsMobileDevice();
         //isMobile = true;
-        saveData = LoadData();
+        SaveData = LoadData();
     }
 
     /// <summary> 현재 접속한 기기 종류 판단 </summary>
@@ -55,7 +54,7 @@ public class DataManager : MonoBehaviour
 
     public static void Save()
     {
-        Save(saveData);
+        Save(SaveData);
     }
 
     public static void Save(SaveData dataToSave)
@@ -72,13 +71,10 @@ public class DataManager : MonoBehaviour
             string jsonString = PlayerPrefs.GetString(SAVE_KEY);
             SaveData loadedData = JsonUtility.FromJson<SaveData>(jsonString);
 
-            if (loadedData.Version.All == null) loadedData.Version.All = new HashSet<string>();
-            if (loadedData.Version.All.Add(loadedData.Version.Current))
+            if (loadedData.Version.Current == SaveData.Default.Version.Current)
             {
-                Save(loadedData);
+                return loadedData;
             }
-
-            return loadedData;
         }
 
         return SaveData.Default;

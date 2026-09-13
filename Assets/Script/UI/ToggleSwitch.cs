@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,8 @@ public class ToggleSwitch : MonoBehaviour
     [Header("Start")]
     public bool initAsStart = true;
     public bool enableAsStart = true;
+    [Header("Subordination")]
+    public ToggleSwitch[] subordinationButtons;
 
     [HideInInspector] public bool isEnable;
 
@@ -62,6 +65,11 @@ public class ToggleSwitch : MonoBehaviour
         {
             InitEnable(enableAsStart);
         }
+
+        foreach (var button in subordinationButtons)
+        {
+            button.AddToggleListener(SubordinationButtonsCallback);
+        }
     }
 
     /// <summary> 초기 <paramref name="enable"/> 상태 설정 및 UI 즉시 갱신 </summary>
@@ -86,6 +94,7 @@ public class ToggleSwitch : MonoBehaviour
     /// <summary> 지정된 <paramref name="enable"/> 상태로 스위치 변경 </summary>
     /// <param name="enable">활성화 여부</param>
     /// <param name="instant">즉시 반영할지 여부</param>
+    public void SetEnableFalse() => SetEnableState(false, false);
     public void SetEnable(bool enable, bool instant = false) => SetEnableState(enable, instant);
     /// <summary> 콜백 없이 <paramref name="enable"/> 상태로 스위치 변경 </summary>
     /// <param name="enable">활성화 여부</param>
@@ -99,6 +108,14 @@ public class ToggleSwitch : MonoBehaviour
     void SetEnableState(bool enable, bool instant, bool hasCallback = true)
     {
         if (enable == isEnable) return;
+        if (enable)
+        {
+            foreach (var button in subordinationButtons)
+            {
+                if (!button.isEnable) return;
+            }
+        }
+
         isEnable = enable;
         if (backgroundImage == null || dot == null) return;
 
@@ -128,6 +145,12 @@ public class ToggleSwitch : MonoBehaviour
         }
 
         if (hasCallback) toggleListener?.Invoke(isEnable);
+    }
+
+    private void SubordinationButtonsCallback(bool enable)
+    {
+        if (!isEnable) return;
+        if (!enable) Invoke("SetEnableFalse", 0.1f);
     }
 
     /// <summary> 토글 상태 변경 이벤트에 <paramref name="listener"/> 추가 </summary>

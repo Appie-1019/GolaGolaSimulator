@@ -50,4 +50,9 @@ public class GameManager : MonoBehaviour
 
         return false;
     }
+
+    public static string GetCurrentSceneName()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 }

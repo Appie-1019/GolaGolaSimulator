@@ -297,7 +297,18 @@ MonoBehaviour:
     titleSize: 80
     detail:
     - 'Appie '
-    - <color=#87CEEB>Anbit</color>
+    - "<color=#87CEEB>Anbit</color> ('\uB6B1\uB6B1\uB0A8' \uB514\uC790\uC778)"
+    detailSize: 40
+  - title: "2D / 3D \uC624\uBE0C\uC81D\uD2B8 \uC544\uD2F0\uC2A4\uD2B8"
+    titleSize: 80
+    detail:
+    - Appie
+    - "<color=#20552e>EE3OO0</color> (FlappieGola\uC758 \uBC30\uACBD \uC624\uBE0C\uC81D\uD2B8
+      \uC77C\uBD80 \uC81C\uC791)"
+    - "<color=#0000ff>kaws</color> (FlappieGola\uC758 \uBC30\uACBD \uC624\uBE0C\uC81D\uD2B8
+      \uC77C\uBD80 \uC81C\uC791)"
+    - "<color=#3E8BD6>hiter</color> (FlappieGola\uC758 \uBC30\uACBD \uC624\uBE0C\uC81D\uD2B8
+      \uC77C\uBD80 \uC81C\uC791)"
     detailSize: 40
   - title: "\uBC30\uACBD \uB514\uC790\uC778"
     titleSize: 80

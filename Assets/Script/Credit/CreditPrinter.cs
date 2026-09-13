@@ -40,9 +40,16 @@ public class CreditPrinter : MonoBehaviour
         stoped = false;
         allText = new List<CreditText>();
         StartCoroutine(PrintCredit());
-        bgmInstance = AudioManager.Instance?.Play2DSound(bgm, SoundType.Game)
+
+        //bgmInstance = AudioManager.Instance?.Play2DSound(bgm, SoundType.Game)
+        //    .SetVolume(0)
+        //    .SetVolume(1f, 7.5f)
+        //    .AddTag("Credit", "BGM");
+
+        bgmInstance = AudioManager.Instance?
+            .Play2DSound(bgm, SoundType.Game)
             .SetVolume(0)
-            .SetVolume(1f, 7.5f)
+            .SetVolume(1, 7.5f)
             .AddTag("Credit", "BGM");
     }
 
@@ -82,7 +89,7 @@ public class CreditPrinter : MonoBehaviour
     {
         AddText("GolaGolaSimulator", Color.gold, 100f);
         yield return WaitForCustomTime(1);
-        AddText(DataManager.saveData.Version.Current, Color.gold, 80f);
+        AddText(DataManager.SaveData.Version.Current, Color.gold, 80f);
         yield return WaitForCustomTime(3);
 
         for (int i = 0; i < texts.Length; i++)
