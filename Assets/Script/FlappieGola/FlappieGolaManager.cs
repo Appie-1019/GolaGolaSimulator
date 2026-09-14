@@ -40,6 +40,7 @@ public class FlappieGolaManager : MonoBehaviour
 
     private void Start()
     {
+        GameOn = false;
         StartCoroutine(GameReadyCoroutine());
         gameOverPanel.localScale = Vector3.zero;
     }
@@ -57,9 +58,8 @@ public class FlappieGolaManager : MonoBehaviour
         controlInfoText.SetActive(true);
         player.FixPosition();
 
-        yield return null;
-        GameOn = true;
         yield return new WaitUntil(CheckJumpInput);
+        GameOn = true;
 
         controlInfoText.SetActive(false);
 

@@ -27,12 +27,12 @@ public class SaveData
 
         Version = new SaveVersion
         {
-            Current = "1.6"
+            Current = "1.6.1"
         },
 
         Tycoon = new TycoonData
         {
-            bestTime = -1019.0f,
+            bestTime = -1019.0f
         },
 
         FlappieGola = new FlappieGolaData

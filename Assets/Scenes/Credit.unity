@@ -257,6 +257,8 @@ MonoBehaviour:
     titleSize: 80
     detail:
     - 'Appie '
+    - "<color=#2bcf49>\uBAA9\uB3C4\uB9AC</color> ('FlappieGola' \uC758 \uC6D0\uBCF8
+      \uC81C\uC791)"
     detailSize: 40
   - title: "\uC2DC\uB098\uB9AC\uC624 / \uC138\uACC4\uAD00"
     titleSize: 80
@@ -375,7 +377,7 @@ MonoBehaviour:
     detail:
     - Appie
     detailSize: 40
-  - title: NullScape 39Level Last Robloxian Stand Fail
+  - title: Nullscape 40level(Celestial) fail
     titleSize: 50
     detail:
     - Appie

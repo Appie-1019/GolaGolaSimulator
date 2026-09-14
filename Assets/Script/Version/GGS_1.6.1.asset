@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f912db265f6164a4da2301e5fba69c49, type: 3}
+  m_Name: GGS_1.6.1
+  m_EditorClassIdentifier: Assembly-CSharp::VersionDataSO
+  versionName: V1.6.1 (2026/9.15)
+  developerComment: "\uC544 \u314B\u314B \uC81C\uC791\uC790\uAC00 \uBB34\uD55C\uC810\uC218\uBC84\uADF8\uACE0\uCE68
+    \uAE4C\uBE44\uC694 \u314B\u314B"
+  additional: []
+  changes:
+  - item: "FlappieGola\uC5D0 \uD2B9\uC815 \uC870\uC791\uC744 \uC785\uB825\uD558\uBA74
+      \uC81C\uB300\uB85C \uB3D9\uC791\uD558\uC9C0 \uC54A\uB294 \uBB38\uC81C\uB97C
+      \uD574\uACB0\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "FlappieGola\uC758 \uD30C\uC774\uD504 \uD788\uD2B8\uBC15\uC2A4(\uCF5C\uB77C\uC774\uB354)\uC758
+      \uD06C\uAE30\uAC00 \uBBFF\uC744 \uC218 \uC5C6\uC744 \uC815\uB3C4\uB85C \uC57D\uAC04
+      \uC791\uC544\uC84C\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  - item: "\uD06C\uB808\uB527\uC5D0 \uC694\uC18C\uB97C \uCD94\uAC00\uD588\uC2B5\uB2C8\uB2E4."
+    subItems: []
+  etc: []

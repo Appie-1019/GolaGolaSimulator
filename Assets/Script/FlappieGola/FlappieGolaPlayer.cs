@@ -89,7 +89,6 @@ public class FlappieGolaPlayer : MonoBehaviour
         rb.simulated = false;
 
         yield return new WaitUntil(() => FlappieGolaManager.GameOn);
-        yield return new WaitUntil(CheckJumpInput);
 
         rb.simulated = true;
         rb.linearVelocity = jumpVector;
