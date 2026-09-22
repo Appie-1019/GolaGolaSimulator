@@ -14,7 +14,11 @@ public enum MovementType
     Tracking = 8,
     NicePC = 9,
     FatAppie = 10,
-    AfterImage = 11
+    AfterImage = 11,
+    OnlyArm = 12,
+    OnlyLeg = 13,
+    Automatic = 14,
+    RageAutomatic = 15
 }
 
 public class MovementManager : MonoBehaviour
@@ -32,6 +36,8 @@ public class MovementManager : MonoBehaviour
     [HideInInspector] public MovementType currentType;
     private Vector3 seizureOffset;
     private Coroutine movementCoroutine;
+    private Vector3 lastPointerPosition;
+    private float currentAngle;
 
     public static MovementManager Instance { get; private set; }
 
@@ -73,8 +79,17 @@ public class MovementManager : MonoBehaviour
             case MovementType.Statue: Move_Statue(); break;
             case MovementType.Tracking: Move_Tracking(); break;
             case MovementType.AfterImage: Move_AfterImage(); break;
+            case MovementType.OnlyArm: Move_OnlyArm(); break;
+            case MovementType.OnlyLeg: Move_OnlyLeg(); break;
+            case MovementType.Automatic: Move_Automatic(); break;
+            case MovementType.RageAutomatic: Move_RageAutomatic(); break;
             default: break;
         }
+    }
+
+    private void LateUpdate()
+    {
+        lastPointerPosition = pointer.transform.position;
     }
 
     public void SetMovementState(MovementType type)
@@ -266,6 +281,65 @@ public class MovementManager : MonoBehaviour
             part.LookAtBody();
         }
 
-        Instantiate(afterImage, body.transform.position, Quaternion.identity);
+        Instantiate(afterImage, pointer.transform.position, Quaternion.identity);
+        Instantiate(afterImage, (pointer.transform.position + lastPointerPosition) / 2, Quaternion.identity);
+    }
+
+    void Move_OnlyArm()
+    {
+        pointer.UpdatePosition();
+
+        for (int i = 0; i < 2; i++)
+        {
+            parts[i].transform.position = pointer.transform.position + parts[i].offset;
+            parts[i].LookAtBody();
+        }
+    }
+
+    void Move_OnlyLeg()
+    {
+        pointer.UpdatePosition();
+
+        for (int i = 2; i < 4; i++)
+        {
+            parts[i].transform.position = pointer.transform.position + parts[i].offset;
+            parts[i].LookAtBody();
+        }
+    }
+
+    void Move_Automatic()
+    {
+        if (MenuPanelToggle.isPanelOpen) return;
+
+        currentAngle += 360.0f * Time.deltaTime;
+        float radian = currentAngle * Mathf.Deg2Rad;
+        float offsetX = Mathf.Cos(radian) * 0.25f;
+        float offsetY = Mathf.Sin(radian) * 0.25f;
+        pointer.transform.position = new Vector3(offsetX, offsetY, 0f);
+
+        body.GotoPointer();
+
+        foreach (GolaGolaParts part in parts)
+        {
+            part.LookAtBody();
+        }
+    }
+
+    void Move_RageAutomatic()
+    {
+        if (MenuPanelToggle.isPanelOpen) return;
+
+        currentAngle += 2520.0f * Time.deltaTime;
+        float radian = currentAngle * Mathf.Deg2Rad;
+        float offsetX = Mathf.Cos(radian) * 0.5f;
+        float offsetY = Mathf.Sin(radian) * 0.5f;
+        pointer.transform.position = new Vector3(offsetX, offsetY, 0f);
+
+        body.GotoPointer();
+
+        foreach (GolaGolaParts part in parts)
+        {
+            part.LookAtBody();
+        }
     }
 }

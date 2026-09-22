@@ -255,7 +255,7 @@ MonoBehaviour:
   targetText1: {fileID: 2060235491}
   targetText2: {fileID: 1376429820}
   dialog:
-  - typeDuration: 0.25
+  - typeDuration: 0.1
     text1: "\uAD11\uACFC\uBBFC\uC131 \uBC1C\uC791 \uACBD\uACE0"
     waitTime1: 0
     text2: "\uC774 \uD504\uB85C\uADF8\uB7A8\uC5D0\uB294 \uBE60\uB974\uAC8C \uC804\uD658\uB418\uB294
@@ -266,8 +266,8 @@ MonoBehaviour:
       \uC2DC\uC57C \uBCC0\uD654, \uB208\uC774\uB098 \uC5BC\uAD74\uC758 \uACBD\uB828,
       \uBC1C\uC791 \uB4F1\uC758 \uC99D\uC0C1\uC774 \uB098\uD0C0\uB098\uBA74 \uC989\uC2DC
       \uCCB4\uD5D8\uC744 \uC911\uB2E8\uD558\uACE0 \uC804\uBB38\uC758\uC640 \uC0C1\uB2F4\uD558\uC2ED\uC2DC\uC624."
-    waitTime2: 1
-  - typeDuration: 0.25
+    waitTime2: 0.1
+  - typeDuration: 0.1
     text1: "\uC774\uAC83\uC740 \uD5C8\uAD6C\uC785\uB2C8\uB2E4"
     waitTime1: 0
     text2: "\uC774 \uD504\uB85C\uADF8\uB7A8\uC740 \uC644\uC804\uD788 \uD5C8\uAD6C\uC774\uBA70
@@ -278,8 +278,8 @@ MonoBehaviour:
       \uC774 \uD504\uB85C\uADF8\uB7A8\uC5D0\uC11C \uBB18\uC0AC\uB41C \uD589\uC704\uB97C
       \uC2B9\uC778\uD558\uAC70\uB098 \uB3C5\uB824\uD558\uAC70\uB098 \uAD8C\uC7A5\uD558\uC9C0
       \uC54A\uC2B5\uB2C8\uB2E4."
-    waitTime2: 1
-  - typeDuration: 0.25
+    waitTime2: 0.1
+  - typeDuration: 0.1
     text1: "\uACBD\uACE0"
     waitTime1: 0
     text2: "\uBCF8 \uD504\uB85C\uADF8\uB7A8\uC744 \uC2E4\uD589 \uBC0F \uC774\uC6A9\uD568\uC5D0
@@ -294,7 +294,7 @@ MonoBehaviour:
       \uB3D9\uC758\uD558\uC9C0 \uC54A\uC73C\uC2E4 \uACBD\uC6B0 \uC989\uC2DC \uBF40\uB85C\uB85C
       \uC7A0\uC637\uC138\uD2B8\uB97C \uC785\uACE0 \uC219\uBA74\uD558\uC2DC\uAE30
       \uBC14\uB78D\uB2C8\uB2E4."
-    waitTime2: 1
+    waitTime2: 0.1
   nextSceneName: Main
 --- !u!4 &822165475
 Transform:

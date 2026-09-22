@@ -27,7 +27,7 @@ public class SaveData
 
         Version = new SaveVersion
         {
-            Current = "1.6.1"
+            Current = "1.7"
         },
 
         Tycoon = new TycoonData

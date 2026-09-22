@@ -94,7 +94,6 @@ public class ToggleSwitch : MonoBehaviour
     /// <summary> 지정된 <paramref name="enable"/> 상태로 스위치 변경 </summary>
     /// <param name="enable">활성화 여부</param>
     /// <param name="instant">즉시 반영할지 여부</param>
-    public void SetEnableFalse() => SetEnableState(false, false);
     public void SetEnable(bool enable, bool instant = false) => SetEnableState(enable, instant);
     /// <summary> 콜백 없이 <paramref name="enable"/> 상태로 스위치 변경 </summary>
     /// <param name="enable">활성화 여부</param>
@@ -105,7 +104,7 @@ public class ToggleSwitch : MonoBehaviour
     /// <param name="enable">활성화 여부</param>
     /// <param name="instant">즉시 반영할지 여부</param>
     /// <param name="hasCallback">콜백을 호출할지 여부</param>
-    void SetEnableState(bool enable, bool instant, bool hasCallback = true)
+    void SetEnableState(bool enable, bool instant, bool hasCallback = true, bool hasSound = true)
     {
         if (enable == isEnable) return;
         if (enable)
@@ -134,13 +133,16 @@ public class ToggleSwitch : MonoBehaviour
             dot.DOAnchorPos(targetPos, moveDuration);
             backgroundImage.DOColor(targetColor, moveDuration);
 
-            if (isEnable)
+            if (hasSound)
             {
-                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI);
-            }
-            else
-            {
-                AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI, 1, 0.5f);
+                if (isEnable)
+                {
+                    AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI);
+                }
+                else
+                {
+                    AudioManager.Instance?.Play2DSound(clickSound, SoundType.UI, 1, 0.5f);
+                }
             }
         }
 
@@ -150,7 +152,7 @@ public class ToggleSwitch : MonoBehaviour
     private void SubordinationButtonsCallback(bool enable)
     {
         if (!isEnable) return;
-        if (!enable) Invoke("SetEnableFalse", 0.1f);
+        SetEnableState(false, false, true, false);
     }
 
     /// <summary> 토글 상태 변경 이벤트에 <paramref name="listener"/> 추가 </summary>

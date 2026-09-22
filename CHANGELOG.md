@@ -211,3 +211,9 @@ Anbit, 에셋 제공 감사합니다!
 * FlappieGola에 특정 조작을 입력하면 제대로 동작하지 않는 문제를 해결했습니다.
 * FlappieGola의 파이프 히트박스(콜라이더)의 크기가 믿을 수 없을 정도로 약간 작아졌습니다.
 * 크레딧에 요소를 추가했습니다.
+
+# CHANGELOG.md 업데이트 중단
+
+이제 GitHub 페이지의 CHANGELOG.md 는 업데이트하지 않을 것입니다.
+
+V1.7 이후의 업데이트 정보는 GolaGolaSimulator 안에서 확인해 주세요.

@@ -2,23 +2,30 @@ using UnityEngine;
 
 public class AfterImage : MonoBehaviour
 {
-    public SpriteRenderer headRenderer;
-    public SpriteRenderer bodyRenderer;
+    public SpriteRenderer head;
+    public SpriteRenderer head_out;
+    public SpriteRenderer body;
+    public SpriteRenderer body_out;
+
+    public SpriteRenderer[] allRenderer;
     public float duration;
     public Vector3 targetScale;
 
     private float elapsedTime = 0f;
-    private Color initialHeadColor;
-    private Color initialBodyColor;
     private Vector3 initialScale;
 
     private void Start()
     {
-        if (headRenderer != null)
-            initialHeadColor = headRenderer.color;
+        if (SkinManager.Instance == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        if (bodyRenderer != null)
-            initialBodyColor = bodyRenderer.color;
+        head.sprite = SkinManager.Instance.head.sprite;
+        head_out.sprite = SkinManager.Instance.head_out.sprite;
+        body.sprite = SkinManager.Instance.body.sprite;
+        body_out.sprite = SkinManager.Instance.body_out.sprite;
 
         initialScale = transform.localScale;
     }
@@ -30,16 +37,11 @@ public class AfterImage : MonoBehaviour
         float progress = Mathf.Clamp01(elapsedTime / duration);
         float alpha = 1f - progress;
 
-        if (headRenderer != null)
+        for (int i = 0; i < allRenderer.Length; i++)
         {
-            initialHeadColor.a = alpha;
-            headRenderer.color = initialHeadColor;
-        }
-
-        if (bodyRenderer != null)
-        {
-            initialBodyColor.a = alpha;
-            bodyRenderer.color = initialBodyColor;
+            Color col = allRenderer[i].color;
+            col.a = alpha;
+            allRenderer[i].color = col;
         }
 
         transform.localScale = Vector3.Lerp(initialScale, targetScale, progress);

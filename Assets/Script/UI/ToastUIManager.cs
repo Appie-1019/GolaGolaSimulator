@@ -63,7 +63,7 @@ public class ToastUIManager : MonoBehaviour
         {
             AddToast("마우스를 움직여 GolaGola", Color.yellow);
             yield return new WaitForSeconds(3f);
-            AddToast("[M] : 눌러서 마우스 숨기기 토글", Color.yellow);
+            AddToast("[M] : 유지해서 마우스 숨기기 토글", Color.yellow);
             yield return new WaitForSeconds(3f);
             AddToast("[TAB] : 눌러서 메뉴 토글", Color.yellow);
         }
@@ -77,14 +77,14 @@ public class ToastUIManager : MonoBehaviour
 
     /// <summary> <paramref name="message"/>를 글자로 하는 토스트 메시지 출력 </summary>
     /// <param name="message">토스트 메시지의 글자</param>
-    public void AddToast(string message)
+    public void AddToast(string message, bool force = false)
     {
-        AddToast(message, DefaultTextColor);
+        AddToast(message, DefaultTextColor, force);
     }
 
-    public void AddToast(string message, Color textColor)
+    public void AddToast(string message, Color textColor, bool force = false)
     {
-        if (!DataManager.SaveData.UI.ToastMessageAllow) return;
+        if (!force && !DataManager.SaveData.UI.ToastMessageAllow) return;
         if (string.IsNullOrWhiteSpace(message)) return;
 
         StackAllToast();

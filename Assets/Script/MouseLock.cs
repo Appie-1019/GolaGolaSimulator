@@ -5,11 +5,31 @@ public class MouseLock : MonoBehaviour
 {
     public static bool isMouseLocked = false;
 
+    private float holdTimer = 0f;
+    private bool hasToggledThisPress = false;
+    private readonly float requiredHoldTime = 0.478723f;
+
     private void Update()
     {
-        if(Keyboard.current != null && Keyboard.current.mKey.wasPressedThisFrame)
+        if (Keyboard.current == null) return;
+
+        if (Keyboard.current.mKey.isPressed)
         {
-            SetMouseLock(!isMouseLocked);
+            if (!hasToggledThisPress)
+            {
+                holdTimer += Time.deltaTime;
+
+                if (holdTimer >= requiredHoldTime)
+                {
+                    SetMouseLock(!isMouseLocked);
+                    hasToggledThisPress = true;
+                }
+            }
+        }
+        else
+        {
+            holdTimer = 0f;
+            hasToggledThisPress = false;
         }
     }
 
